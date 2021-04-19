@@ -1,0 +1,11 @@
+.main_div{
+    min-height: calc(100vh - 240px);
+}
+nav  ul {
+    display: flex;
+    justify-content: center;
+}
+nav  ul li {
+    display: inline-block;
+    margin: 0px 10px; 
+}

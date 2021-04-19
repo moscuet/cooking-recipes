@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:140px;
+    width:100%;
+    background-color: white;
+    border-bottom: 5px solid yellow;
+}
+.header  ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+

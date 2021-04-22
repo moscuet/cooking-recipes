@@ -1,7 +1,9 @@
-const Recipes = () => {
+import Recipe from './Recipe'
+const Recipes = ({recipes}) => {
+  console.log('from recipes',recipes)
   return (
     <div className = 'recipes'>
-      <h1>This is the Recipes page</h1>
+      {recipes.map( r => <Recipe key ={r.id} recipe ={r}/>)}
     </div>
   );
 };

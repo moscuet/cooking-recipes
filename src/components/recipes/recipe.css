@@ -1,0 +1,14 @@
+
+.recipe-box{
+    height: 200px;
+    width: 250px;
+    margin: 20px;
+}
+.image-div {
+
+    width: 100%;
+}
+.image-div img {
+   width: 250px;
+   height: 200px;
+}

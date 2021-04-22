@@ -1,5 +1,5 @@
 import React from 'react'
-import 'recipe.css'
+import './recipe.css'
 export default function Recipe({recipe}) {
     console.log('recipe frpm Recipe',recipe.image)
     return (

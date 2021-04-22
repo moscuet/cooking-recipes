@@ -1,5 +1,6 @@
 .main_div{
     min-height: calc(100vh - 240px);
+    margin: 20px 50px;
 }
 nav  ul {
     display: flex;

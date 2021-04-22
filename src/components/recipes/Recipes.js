@@ -1,4 +1,5 @@
 import Recipe from './Recipe'
+import './recipes.css'
 const Recipes = ({recipes}) => {
   console.log('from recipes',recipes)
   return (

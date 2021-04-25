@@ -64,12 +64,6 @@
          echo 'delete request';
         }
     }
-    
-
-
-
-
-
 
         // $write_file_result = file_put_contents('formatted_data.json', $data);
         ?>

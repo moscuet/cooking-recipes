@@ -7,10 +7,12 @@
 ### requirements for the app: 
 Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React Router set up simple navigation with three pages –home, recipes, about-Start styling your appPrototype to project.....
 
-### [pigma design skeleton ](https://www.figma.com/proto/qrSkTc3vtJDBj8jy8QyWHH/CookBook?node-id=1%3A2&viewport=228%2C397%2C0.35646429657936096&scaling=min-zoom&page-id=0%3A1) 
+### [Strating Design Idea in pigma](https://www.figma.com/proto/qrSkTc3vtJDBj8jy8QyWHH/CookBook?node-id=1%3A2&viewport=228%2C397%2C0.35646429657936096&scaling=min-zoom&page-id=0%3A1) 
 
-// https://jsonplaceholder.typicode.com/
-//https://webcode.tools/generators/json-ld/recipe
+### [Json place holder](https://jsonplaceholder.typicode.com/
+### [Recipe Json Data Generator](https://webcode.tools/generators/json-ld/recipe)
+
+
 
 # Getting Started with Create React App
 

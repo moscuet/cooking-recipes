@@ -1,4 +1,5 @@
 ## Notes
+## Notes
 1. php server was build to serve cooking recipes file to frontend app. 
 2. server is beinghosted in Business College Helsinkis's hosting platform BC drive.
 3. to avoid CORS policy, Heroku proxy server was used to make http request.
@@ -6,6 +7,7 @@
 
 ### requirements for the app: 
 Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React Router set up simple navigation with three pages –home, recipes, about-Start styling your appPrototype to project.....
+
 
 ### [pigma design skeleton ](https://www.figma.com/proto/qrSkTc3vtJDBj8jy8QyWHH/CookBook?node-id=1%3A2&viewport=228%2C397%2C0.35646429657936096&scaling=min-zoom&page-id=0%3A1) 
 

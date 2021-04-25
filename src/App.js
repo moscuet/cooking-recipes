@@ -15,8 +15,9 @@ class App extends Component {
   }
 
   componentDidMount(){
-     axios.get('http://localhost:3001/recipes')
+     axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
      .then( res =>{
+       console.log(res.data)
        this.setState({recipes:res.data})
      })
     

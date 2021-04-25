@@ -1,5 +1,5 @@
-## Notes
-## Notes
+# REACt-App: My-Recipies
+### Notes
 1. php server was build to serve cooking recipes file to frontend app. 
 2. server is beinghosted in Business College Helsinkis's hosting platform BC drive.
 3. to avoid CORS policy, Heroku proxy server was used to make http request.

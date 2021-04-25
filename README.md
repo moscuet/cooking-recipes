@@ -1,4 +1,5 @@
 ## Notes
+## Notes
 1. php server was build to serve cooking recipes file to frontend app. 
 2. server is beinghosted in Business College Helsinkis's hosting platform BC drive.
 3. to avoid CORS policy, Heroku proxy server was used to make http request.
@@ -11,8 +12,6 @@ Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React
 
 ### [Json place holder](https://jsonplaceholder.typicode.com/
 ### [Recipe Json Data Generator](https://webcode.tools/generators/json-ld/recipe)
-
-
 
 # Getting Started with Create React App
 

@@ -1,20 +1,12 @@
 
     <?php
-    header('Access-Control-Allow-Origin: *');
      $data = file_get_contents('data.json');
      $formatted_data = json_decode($data,true);
      $recipes_array = $formatted_data['recipes'];
     
      $request_method = $_SERVER['REQUEST_METHOD'];
      $uri = $_SERVER['REQUEST_URI'];
-    //  $parsed_url = parse_url($uri);
-    //  $query = $parsed_url['query'];
-    //  $exploded_query = explode('&',$query);
-    //  $exploded_url = explode('/', $parsed_url['path']);
-    //  $id = $exploded_url[2]; 
-    //  echo '<pre>';
-   
-    //  echo '</pre>';
+    
      $id = $_GET['id'];
      $path = $_GET['path'];
 
@@ -51,7 +43,6 @@
            }
            else{
             echo json_encode($GLOBALS['recipes_array']); 
-
            }
         }else {
           echo json_encode(array('message' => 'invalid path'));
@@ -64,7 +55,14 @@
          echo 'delete request';
         }
     }
-
-        // $write_file_result = file_put_contents('formatted_data.json', $data);
-        ?>
+    //  echo '<pre>';
+    //  echo '</pre>';
+    
+    // $write_file_result = file_put_contents('formatted_data.json', $data);
+    //  $parsed_url = parse_url($uri);
+    //  $query = $parsed_url['query'];
+    //  $exploded_query = explode('&',$query);
+    //  $exploded_url = explode('/', $parsed_url['path']);
+    //  $id = $exploded_url[2]; 
+?>
 

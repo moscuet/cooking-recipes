@@ -22,17 +22,13 @@ inputHandler = (e) =>{
    const userInput = e.target.value
    let allRecipes = [...this.state.recipes]
    let filteredRecipes = allRecipes.filter( recipe =>{
-     return recipe.name.includes(userInput)
-
-     //this.setState({searchedRecipes:filteredRecipes})
+     console.log(recipe)
+     return recipe.name.toUpperCase().includes(userInput.toUpperCase())
    })
    this.setState({searchedRecipes:filteredRecipes})
    //this.setState({serachedWord: e.tarrget['name'].value})
 }
-searchedHandler = (input) =>{
-  console.log(input)
-  console.log('from searchhandler',this.state.recipes)
-}
+
   componentDidMount(){
      axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
      .then( res =>{
@@ -41,7 +37,6 @@ searchedHandler = (input) =>{
   }
 
   render() {
-    this.searchedHandler();
     return (
       <div>
         

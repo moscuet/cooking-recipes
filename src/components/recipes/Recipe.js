@@ -1,7 +1,6 @@
 import React from 'react'
 import './recipe.css'
 export default function Recipe({recipe}) {
-    console.log('recipe frpm Recipe',recipe.image)
     return (
         <div className="recipe-box">
             <div className="image-div">

@@ -1,5 +1,5 @@
 const Home = (props) => {
-  console.log('props from home',props)
+  //console.log('props from home',props)
   return (
     <div className ='home'>
       <h1>Welcome to Fooddies!</h1>

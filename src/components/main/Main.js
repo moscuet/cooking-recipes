@@ -7,7 +7,8 @@ import Recipes from '../recipes/Recipes'
 import About from '../about/About'
 
 const Main = (props) => {
-   console.log('props from main',props.recipes)
+   //console.log('props from main',props.recipes)
+   
   return (
     <div className = 'main_div'>
 

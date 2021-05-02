@@ -1,24 +1,36 @@
 # REACt-App: My-Recipies
+This is a recipies app developed with React.js and php
+
 ### Notes
-1. php server was build to serve cooking recipes file to frontend app. 
-2. server is beinghosted in Business College Helsinkis's hosting platform BC drive.
+1. php server was build to serve cooking recipes as json file to frontend app. 
+2. server is being hosted in Business College Helsinkis's hosting platform BC drive.
 3. to avoid CORS policy, Heroku proxy server was used to make http request.
 
+### Own developed recipies API: [Server](https://public.bc.fi/s2100146/php/server_recipe/?path=recipes&)
 
 ### requirements for the app: 
-Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React Router set up simple navigation with three pages –home, recipes, about-Start styling your appPrototype to project.....
+1. Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React Router set up simple navigation with three pages –home, recipes, about-Start styling your appPrototype to project.....
 
 ### [Strating Design Idea in pigma](https://www.figma.com/proto/qrSkTc3vtJDBj8jy8QyWHH/CookBook?node-id=1%3A2&viewport=228%2C397%2C0.35646429657936096&scaling=min-zoom&page-id=0%3A1) 
 
 ### [Json place holder](https://jsonplaceholder.typicode.com/)
 ### [Recipe Json Data Generator](https://webcode.tools/generators/json-ld/recipe)
 
+<<<<<<< HEAD
 ### created recipes data server: [Server]('https://public.bc.fi/s2100146/php/server_recipe/?path=recipes&')
 https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes
 
 ### [Avoid CORS Article](https://medium.com/swlh/avoiding-cors-errors-on-localhost-in-2020-5a656ed8cefa)
 
 
+=======
+
+
+
+
+
+
+>>>>>>> 262cc82b9ce65317c36fe67bf9dc55eaa7208747
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

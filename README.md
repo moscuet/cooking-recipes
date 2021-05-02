@@ -14,8 +14,11 @@ Make App, Header, Main, Footer, Nav, Home, Recipes, About components-Using React
 ### [Recipe Json Data Generator](https://webcode.tools/generators/json-ld/recipe)
 
 ### created recipes data server: [Server]('https://public.bc.fi/s2100146/php/server_recipe/?path=recipes&')
+https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes
 
-### data server 'request url' to avoid CORS policy: [Proxy Server URL]('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
+### [Avoid CORS Article](https://medium.com/swlh/avoiding-cors-errors-on-localhost-in-2020-5a656ed8cefa)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

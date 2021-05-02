@@ -49,6 +49,10 @@
         }
     } 
 
+    function add_new_recipe(){
+        echo json_encode(array('message' => 'An error has occured'));
+    }
+
     function remove_recipe(){
         $path = $GLOBALS['parts']['path'];
         if($GLOBALS['parts']['path']==='/recipes'){

@@ -17,8 +17,23 @@ class App extends Component {
     recipes:[],
     searchedRecipes: [],
     serachedWord : '',
+    newRecipe:{
+      name:'',
+      catagory:'',
+      cuisine:'',
+      pretime:0,
+      cooktime:0,
+      yield:0,
+      datepublished:'',
+      description:'',
+      keywords:'',
+      author:'',
+      image:[],
+      ingredients:[],
+      steps:[]
+    }
   }
-inputHandler = (e) =>{
+searchInputHandler = (e) =>{
    const userInput = e.target.value
    let allRecipes = [...this.state.recipes]
    let filteredRecipes = allRecipes.filter( recipe =>{
@@ -26,7 +41,35 @@ inputHandler = (e) =>{
      return recipe.name.toUpperCase().includes(userInput.toUpperCase())
    })
    this.setState({searchedRecipes:filteredRecipes})
-   //this.setState({serachedWord: e.tarrget['name'].value})
+}
+
+formChangeHandler = (e)=> {
+  let newRecipe = {...this.state.newRecipe,[e.target.name]:e.target.value}
+  this.setState({...this.state,newRecipe})
+}
+
+formSubmitHandler =(e) =>{
+  e.preventDefault()
+  axios.get('http://localhost:3001/?path=recipes')
+     .then( res =>{
+       console.log(res.data)
+     })
+
+
+
+     //fetch("http://localhost:3001/?path=recipes")
+     // .then(res =>res.json())
+     // .then( data =>console.log(data))
+
+  // const requestOptions = {
+  //   method:"GET",
+  //   headers:{"content-type":"application/json"},
+  //  //body: JSON.stringify(this.state.newRecipe)//{note:this.state.userInput}
+  // };
+  // fetch("http://localhost:3001/?path=recipes",requestOptions)
+  // .then(res =>res.json())
+  // .then( data =>console.log(data))
+
 }
 
   componentDidMount(){
@@ -42,7 +85,12 @@ inputHandler = (e) =>{
         
          <Router>
           <Header/>
-          <Main  recipes = {this.state.searchedRecipes} inputHandler = {this.inputHandler}/>
+          <Main  
+            recipes = {this.state.searchedRecipes} 
+            inputHandler = {this.searchInputHandler}
+            formSubmit = {this.formSubmitHandler}
+            formChangeHandler = {this.formChangeHandler}
+          />
           <Footer/>
         </Router>
       </div>
@@ -53,3 +101,12 @@ inputHandler = (e) =>{
 
 export default App;
 
+
+//const requestOptions = {
+  //   method:"GET",
+  //   mode: 'no-cors',
+  //   headers:{
+  //     "content-type":"application/json",
+  //     "Access-Control-Allow-Origin":"*"
+  //       }
+  // };

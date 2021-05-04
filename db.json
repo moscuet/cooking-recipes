@@ -1,19 +1,361 @@
+
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "recipes":[
+        {   "id":1,
+            "@type": "Recipe",
+            "name": "Biryani",
+            "image": [
+              "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+            ],
+            "recipeCategory": "Main course",
+            "recipeCuisine": "Indian",
+            "prepTime": "PT60M",
+            "cookTime": "PT60M",
+            "totalTime": "PT120M",
+            "recipeYield": "8",
+            "datePublished": "2021-04-20",
+            "description": "Biryani is a mixed rice dish originating among the Muslims of the Indian subcontinent. It is made with Indian spices, rice, and meat, and sometimes, in addition, eggs and/or vegetables such as potatoes in certain regional varieties.",
+            "recipeIngredient": [
+              "Chicken",
+              "Rice",
+              "Indian spicies"
+            ],
+            "recipeInstructions": [
+              {
+                "@type": "HowToStep",
+                "name": "Prepare rice",
+                "text": "Soak 300g basmati rice in warm water, then wash in cold until the water runs clear."
+              }
+              ,
+              {
+                "@type": "HowToStep",
+                "name": "pre preparation",
+                "text": "Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins."
+              }
+              ,
+              {
+                "@type": "HowToStep",
+                "name": "step4",
+                "text": "Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic."
+              }
+              ,
+              {
+                "@type": "HowToStep",
+                "name": "step 5",
+                "text": "Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins."
+              }
+              ,
+              {
+                "@type": "HowToStep",
+                "name": "step 6",
+                "text": "Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds."
+              }
+              ,
+              {
+                "@type": "HowToStep",
+                "text": ""
+              }
+            ]
+        },
+
+
+        { "id":2,
+          "@type": "Recipe",
+          "name": "cheesy fish pie with kale",
+          "image": [
+            "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272",
+            ""
+          ],
+          "recipeCategory": "dinner",
+          "prepTime": "PT10M",
+          "cookTime": "PT45M",
+          "totalTime": "PT55M",
+          "recipeYield": "2",
+          "datePublished": "2021-04-20",
+          "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
+          "author": {
+            "@type": "Person",
+            "name": ""
+          },
+          "recipeIngredient": [
+            "200g Maris Piper potatoes , cut into chunks",
+            "1 tbsp butter",
+            "1 tbsp flour",
+            "200ml whole milk , plus 1 tbsp",
+            "½ tsp Dijon mustard",
+            "100g cheddar , gruyère or emmental, grated",
+            "200g fish pie mix (we used a mix of salmon, haddock and prawns)",
+            "50g frozen peas",
+            "50g shredded kale",
+            "1 spring onion , finely sliced",
+            "1 tbsp parmesan , finely grated",
+            "green salad , to serve (optional)"
+          ],
+          "recipeInstructions": [
+            {
+              "@type": "HowToStep",
+              "name": "Prepare rice",
+              "text": "Soak 300g basmati rice in warm water, then wash in cold until the water runs clear."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "pre preparation",
+              "text": "Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step4",
+              "text": "Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step 5",
+              "text": "Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step 6",
+              "text": "Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "text": ""
+            }
+          ]
+        },
+        
+        {"id":3,
+        "@type": "Recipe",
+        "name": "Spiced salmon & tomato traybake",
+        "image": [
+            "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spiced-salmon-tomato-traybake-e6664f7.jpg?quality=90&webp=true&resize=300,272",
+            ""
+        ],
+        "recipeCategory": "Lunch",
+        "prepTime": "PT5M",
+        "cookTime": "PT25M",
+        "totalTime": "PT30M",
+        "recipeYield": "2",
+        "datePublished": "2021-04-20",
+        "description": "Enjoy this healthy spiced salmon and tomato traybake with a mild curry flavour for a quick and easy midweek meal. Serve with naan bread and lemon wedges",
+        "author": {
+            "@type": "Person",
+            "name": ""
+        },
+        "recipeIngredient": [
+            "1 red onion , sliced",
+            "200g cherry tomatoes",
+            "3 tbsp mild or madras curry paste",
+            "400g can chickpeas , drained and rinsed",
+            "2 skinless salmon fillets",
+            "1 large or 2 small naan breads",
+            "2 tbsp fat-free yogurt",
+            "lemon wedges and a few coriander leaves, to serve (optional)"
+        ],
+        "recipeInstructions": [
+            {
+            "@type": "HowToStep",
+            "name": "step 2",
+            "text": "Stir everything, then season. Brush the remaining curry paste over the salmon fillets and season. Nestle the salmon into the veg in the tin and roast for another 8-10 mins, or until cooked to your liking."
+            }
+            ,
+            {
+            "@type": "HowToStep",
+            "name": "step3",
+            "text": "Meanwhile, warm the naan breads – you can do this by putting them directly on the oven rack below the roasting tin. Cut the warmed naan breads into wedges. Swirl the yogurt into the veg in the tin, then serve with the naan wedges for dunking, a few coriander leaves sprinkled over, if you like, and the lemon wedges, if using, for squeezing over."
+            }
+            ,
+            {
+            "@type": "HowToStep",
+            "name": "step 3",
+            "text": "Meanwhile, warm the naan breads – you can do this by putting them directly on the oven rack below the roasting tin. Cut the warmed naan breads into wedges. Swirl the yogurt into the veg in the tin, then serve with the naan wedges for dunking, a few coriander leaves sprinkled over, if you like, and the lemon wedges, if using, for squeezing over."
+            }
+            
+        ]
+        },
+        {   "id":4,
+          "@type": "Recipe",
+          "name": "Biryani",
+          "image": [
+            "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          ],
+          "recipeCategory": "Main course",
+          "recipeCuisine": "Indian",
+          "prepTime": "PT60M",
+          "cookTime": "PT60M",
+          "totalTime": "PT120M",
+          "recipeYield": "8",
+          "datePublished": "2021-04-20",
+          "description": "Biryani is a mixed rice dish originating among the Muslims of the Indian subcontinent. It is made with Indian spices, rice, and meat, and sometimes, in addition, eggs and/or vegetables such as potatoes in certain regional varieties.",
+          "recipeIngredient": [
+            "Chicken",
+            "Rice",
+            "Indian spicies",
+            ""
+          ],
+          "recipeInstructions": [
+            {
+              "@type": "HowToStep",
+              "name": "Prepare rice",
+              "text": "Soak 300g basmati rice in warm water, then wash in cold until the water runs clear."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "pre preparation",
+              "text": "Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step4",
+              "text": "Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step 5",
+              "text": "Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "name": "step 6",
+              "text": "Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds."
+            }
+            ,
+            {
+              "@type": "HowToStep",
+              "text": ""
+            }
+          ]
+      },
+
+
+      { "id":5,
+        "@type": "Recipe",
+        "name": "cheesy fish pie with kale",
+        "image": [
+          "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272",
+          ""
+        ],
+        "recipeCategory": "dinner",
+        "prepTime": "PT10M",
+        "cookTime": "PT45M",
+        "totalTime": "PT55M",
+        "recipeYield": "2",
+        "datePublished": "2021-04-20",
+        "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
+        "author": {
+          "@type": "Person",
+          "name": ""
+        },
+        "recipeIngredient": [
+          "200g Maris Piper potatoes , cut into chunks",
+          "1 tbsp butter",
+          "1 tbsp flour",
+          "200ml whole milk , plus 1 tbsp",
+          "½ tsp Dijon mustard",
+          "100g cheddar , gruyère or emmental, grated",
+          "200g fish pie mix (we used a mix of salmon, haddock and prawns)",
+          "50g frozen peas",
+          "50g shredded kale",
+          "1 spring onion , finely sliced",
+          "1 tbsp parmesan , finely grated",
+          "green salad , to serve (optional)"
+        ],
+        "recipeInstructions": [
+          {
+            "@type": "HowToStep",
+            "name": "Prepare rice",
+            "text": "Soak 300g basmati rice in warm water, then wash in cold until the water runs clear."
+          }
+          ,
+          {
+            "@type": "HowToStep",
+            "name": "pre preparation",
+            "text": "Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins."
+          }
+          ,
+          {
+            "@type": "HowToStep",
+            "name": "step4",
+            "text": "Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic."
+          }
+          ,
+          {
+            "@type": "HowToStep",
+            "name": "step 5",
+            "text": "Place a tight-fitting lid on the pan and bring to a hard boil, then lower the heat to a minimum and cook the rice for another 5 mins."
+          }
+          ,
+          {
+            "@type": "HowToStep",
+            "name": "step 6",
+            "text": "Turn off the heat and leave for 10 mins. Stir well, mixing through 15g chopped coriander. To serve, scatter over the leaves of the remaining 15g coriander and 2 tbsp toasted almonds."
+          }
+          ,
+          {
+            "@type": "HowToStep",
+            "text": ""
+          }
+        ]
+      },
+      
+      {"id":6,
+      "@type": "Recipe",
+      "name": "Spiced salmon & tomato traybake",
+      "image": [
+          "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spiced-salmon-tomato-traybake-e6664f7.jpg?quality=90&webp=true&resize=300,272",
+          ""
+      ],
+      "recipeCategory": "Lunch",
+      "prepTime": "PT5M",
+      "cookTime": "PT25M",
+      "totalTime": "PT30M",
+      "recipeYield": "2",
+      "datePublished": "2021-04-20",
+      "description": "Enjoy this healthy spiced salmon and tomato traybake with a mild curry flavour for a quick and easy midweek meal. Serve with naan bread and lemon wedges",
+      "author": {
+          "@type": "Person",
+          "name": ""
+      },
+      "recipeIngredient": [
+          "1 red onion , sliced",
+          "200g cherry tomatoes",
+          "3 tbsp mild or madras curry paste",
+          "400g can chickpeas , drained and rinsed",
+          "2 skinless salmon fillets",
+          "1 large or 2 small naan breads",
+          "2 tbsp fat-free yogurt",
+          "lemon wedges and a few coriander leaves, to serve (optional)"
+      ],
+      "recipeInstructions": [
+          {
+          "@type": "HowToStep",
+          "name": "step 2",
+          "text": "Stir everything, then season. Brush the remaining curry paste over the salmon fillets and season. Nestle the salmon into the veg in the tin and roast for another 8-10 mins, or until cooked to your liking."
+          }
+          ,
+          {
+          "@type": "HowToStep",
+          "name": "step3",
+          "text": "Meanwhile, warm the naan breads – you can do this by putting them directly on the oven rack below the roasting tin. Cut the warmed naan breads into wedges. Swirl the yogurt into the veg in the tin, then serve with the naan wedges for dunking, a few coriander leaves sprinkled over, if you like, and the lemon wedges, if using, for squeezing over."
+          }
+          ,
+          {
+          "@type": "HowToStep",
+          "name": "step 3",
+          "text": "Meanwhile, warm the naan breads – you can do this by putting them directly on the oven rack below the roasting tin. Cut the warmed naan breads into wedges. Swirl the yogurt into the veg in the tin, then serve with the naan wedges for dunking, a few coriander leaves sprinkled over, if you like, and the lemon wedges, if using, for squeezing over."
+          }
+          
+      ]
+      }
+
+    ]
 }

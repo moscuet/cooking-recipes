@@ -16,21 +16,16 @@ This is a recipies app developed with React.js and php
 ### [Json place holder](https://jsonplaceholder.typicode.com/)
 ### [Recipe Json Data Generator](https://webcode.tools/generators/json-ld/recipe)
 
-<<<<<<< HEAD
 ### created recipes data server: [Server]('https://public.bc.fi/s2100146/php/server_recipe/?path=recipes&')
 https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes
 
 ### [Avoid CORS Article](https://medium.com/swlh/avoiding-cors-errors-on-localhost-in-2020-5a656ed8cefa)
 
 
-=======
+### unique id generator- uuidv4: 
+install: $ npm install uuidv4
+import: const { uuid } = require('uuidv4');
 
-
-
-
-
-
->>>>>>> 262cc82b9ce65317c36fe67bf9dc55eaa7208747
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

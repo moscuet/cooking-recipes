@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+//import { uuid } from 'uuidv4'
+import { v4 as uuidv4 } from 'uuid';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 export default function AddRecipe() {
     const [data, setData] = useState({
+        id:uuidv4(),
         author:"",
         name: "",
         catagory:"",
@@ -66,10 +69,13 @@ export default function AddRecipe() {
       };
 
 
-
-
       const submitData = (e) => {
-        axios.post("http://localhost:3001/recipies", data);
+          e.preventDefault()
+        axios.post("http://localhost:3001/recipies", data)
+        .then( response=> {
+            console.log('post response', response.data.id)
+           // e.target.reset()
+        } )
       };
         
     

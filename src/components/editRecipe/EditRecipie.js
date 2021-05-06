@@ -30,11 +30,11 @@ export default function EditRecipe() {
           //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
           axios.get('http://localhost:3001/recipies')
          .then( response =>{
-             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
-          setData(targetRecipe)
-          setIngredients(targetRecipe.ingredients)
-          setSteps(targetRecipe.steps)
-          setImgs(targetRecipe.image)
+            let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
+            setData(targetRecipe)
+            setIngredients(targetRecipe.ingredients)
+            setSteps(targetRecipe.steps)
+            setImgs(targetRecipe.image)
          })
         }
         getData();
@@ -82,14 +82,13 @@ export default function EditRecipe() {
         setImgs([...imgs, '']);
       };
 
-
-
-
       const submitData = (e) => {
-        axios.put(`http://localhost:3001/recipies/${id}`, data);
+          e.preventDefault()
+        axios.put(`http://localhost:3001/recipies/${id}`, data)
+        .then( response => window.location.replace(`http://localhost:3000/recipes/${id}`)
+        )
       };
         
-    
     
     return (
             <Form onSubmit={submitData}>

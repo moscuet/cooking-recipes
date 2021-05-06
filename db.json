@@ -1,8 +1,8 @@
 {
   "recipies": [
     {
-      "author": "ahmed",
-      "name": "cheesy fish pie",
+      "author": "ahmedd",
+      "name": "cheesy fish piee",
       "catagory": "dinner",
       "cuisine": "maxican",
       "preptime": "30",
@@ -19,7 +19,7 @@
         {
           "id": 2,
           "ingName": "200ml whole milk , plus 1 tbsp",
-          "quantity": "200ml"
+          "quantity": "250ml"
         }
       ],
       "steps": [

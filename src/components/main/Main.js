@@ -4,10 +4,10 @@ import axios from 'axios'
 import './main.css'
 import Home from '../home/Home'
 import Recipes from '../recipes/Recipes'
-import RecipeCard from '../recipes/RecipeCard'
 import SingleRecipe from '../recipes/SingleRecipe'
 import About from '../about/About'
 import AddRecipie from '../addRecipie/AddRecipe'
+import EditRecipie from '../editRecipe/EditRecipie'
 const Main = (props) => {
   const [recipes, setRecipes] = useState([])
   const [searchedRecipes, setSearchedRecipes] = useState([])
@@ -34,7 +34,8 @@ const Main = (props) => {
 
   useEffect( ()=>{
     const getData = async () =>{
-      axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
+      //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
+      axios.get('http://localhost:3001/recipies')
      .then( response =>{
       setRecipes(response.data)
       setSearchedRecipes(response.data)
@@ -66,7 +67,6 @@ const Main = (props) => {
   }  
 
 
-
   return (
     <div className = 'main_div'>
       <Switch>
@@ -75,6 +75,7 @@ const Main = (props) => {
         <Route path="/recipes" render={() => (<Recipes recipes ={searchedRecipes} inputHandler = {searchInputHandler}/>)} ></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/addRecipie"><AddRecipie formSubmit = {formSubmitHandler} formChangeHandler = {formChangeHandler}/></Route>
+        <Route path="/editRecipie/:id"><EditRecipie  /></Route>
       </Switch>
     </div>
   );

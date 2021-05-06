@@ -10,7 +10,7 @@ export default function Recipe({recipe}) {
                 </div>
                 <p>{recipe.name}</p>
             </Link>
-            {/* <Link to = {`recipes/${recipe.id}`}>Read more...</Link> */}
+            <Link to = {`recipes/${recipe.id}`}>Read more...</Link>
         </div>
     )
 }

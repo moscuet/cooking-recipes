@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/header/Header'
 import Main from '../src/components/main/Main'
 import Footer from '../src/components/footer/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

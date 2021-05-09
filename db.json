@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "author": "ahmed",
+      "author": "ahmedd",
       "name": "cheesy fish pie",
       "catagory": "dinner",
       "cuisine": "maxican",
@@ -116,6 +116,48 @@
       "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
       "keyWords": "fish pie,maxican,dinner",
       "id": "3"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "rahman@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "email": "mos.cuet@gmail.com",
+      "password": "1234"
+    },
+    {
+      "email": "soukainarahman01@gmail.com",
+      "password": "1",
+      "id": 3
+    },
+    {
+      "email": "mos.cuet@gmail.com",
+      "password": "111",
+      "id": 4
+    },
+    {
+      "email": "leilaakrich@gmail.com",
+      "password": "111",
+      "id": 5
+    },
+    {
+      "email": "mos.cuet@gmail.com",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "email": "soukainarahman01@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "email": "soukainarahman01@gmail.com",
+      "password": "1",
+      "id": 8
     }
   ]
 }

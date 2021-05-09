@@ -35,7 +35,7 @@ const Main = (props) => {
   useEffect( ()=>{
     const getData = async () =>{
       //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
-      axios.get('http://localhost:3001/recipies')
+      axios.get('http://localhost:3001/recipes')
      .then( response =>{
       setRecipes(response.data)
       setSearchedRecipes(response.data)

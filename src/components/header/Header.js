@@ -9,7 +9,7 @@ import Nav from '../nav/Nav'
 function Header() {
     return (
       <div className = 'header'>
-            <div><img src={Logo} alt = 'portfolio_logo'/></div>
+            <div className="image_div"><img src={Logo} alt = 'portfolio_logo'/></div>
             <Nav/>      
       </div>
         

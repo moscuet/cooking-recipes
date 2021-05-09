@@ -1,14 +1,12 @@
 import React, { useState , useEffect} from "react";
 import axios from "axios";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Form,Button,Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams} from 'react-router'
 export default function EditRecipe() {
     let {id} = useParams()
-    id = Number(id)
     const [data, setData] = useState({
+        id:"",
         author:"",
         name: "",
         catagory:"",
@@ -16,21 +14,22 @@ export default function EditRecipe() {
         preptime:"",
         cooktime:"",
         yield:"",
-        KeyWords:"",
+        keyWords:"",
         description: "",
-        ingredients:[],
-        steps:[],
-        image:[],
+        ingredients:[{}],
+        steps:[{}],
+        image:[''],
       });
-      const [ingredients, setIngredients] = useState([])
-      const [steps, setSteps] = useState([])
-      const [imgs, setImgs] = useState([])
+      const [ingredients, setIngredients] = useState([{ id: 1, ingName: "", quantity: "" }])
+      const [steps, setSteps] = useState([{ id: 1, desc: "", img: "" },])
+      const [imgs, setImgs] = useState([""])
       useEffect( ()=>{
         const getData = async () =>{
           //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
-          axios.get('http://localhost:3001/recipies')
+          axios.get('http://localhost:3001/recipes')
          .then( response =>{
             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
+            console.log(targetRecipe)
             setData(targetRecipe)
             setIngredients(targetRecipe.ingredients)
             setSteps(targetRecipe.steps)
@@ -39,8 +38,6 @@ export default function EditRecipe() {
         }
         getData();
         }, [id]);
-    
-    
     
       const formChangeHandler = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
@@ -84,7 +81,7 @@ export default function EditRecipe() {
 
       const submitData = (e) => {
           e.preventDefault()
-        axios.put(`http://localhost:3001/recipies/${id}`, data)
+        axios.put(`http://localhost:3001/recipes/${id}`, data)
         .then( response => window.location.replace(`http://localhost:3000/recipes/${id}`)
         )
       };
@@ -92,112 +89,116 @@ export default function EditRecipe() {
     
     return (
             <Form onSubmit={submitData}>
-                 <Form.Group>
-                    <Form.Label htmlFor = "author">author</Form.Label>
-                    <Form.Control type="text" id= "author"  name= "author" value = {data.author} onChange ={formChangeHandler}  />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor = "name">Recipe name</Form.Label>
-                    <Form.Control id = 'name' type="text"  name= "name" value = {data.name} onChange ={formChangeHandler}  required/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor = "catagory">Catagory</Form.Label>
-                    <Form.Control type="text" id= "catagory" name= "catagory" value = {data.catagory}  onChange ={formChangeHandler}  />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor = "cuisine">Cuisine</Form.Label>
-                    <Form.Control type="text" id= "cuisine" name= "cuisine" value = {data.cuisine}  onChange ={formChangeHandler}  />
-                </Form.Group>
+                 <Container >                
+                    <Row>
+                        <Col  xs={12} md={5} lg={4}>
+                            <Form.Group>
+                                <Form.Label htmlFor = "author">author</Form.Label>
+                                <Form.Control type="text" id= "author"  name= "author" value = {data.author} onChange ={formChangeHandler}  />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "name">Recipe name</Form.Label>
+                                <Form.Control id = 'name' type="text"  name= "name" value = {data.name} onChange ={formChangeHandler}  required/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "catagory">Catagory</Form.Label>
+                                <Form.Control type="text" id= "catagory" name= "catagory" value = {data.catagory}  onChange ={formChangeHandler}  />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "cuisine">Cuisine</Form.Label>
+                                <Form.Control type="text" id= "cuisine" name= "cuisine" value = {data.cuisine}  onChange ={formChangeHandler}  />
+                            </Form.Group>
 
-                <Form.Group>
-                    <Form.Label htmlFor = "preptime">Preparation time</Form.Label>
-                    <Form.Control type="number" id= "preptime" name= "preptime" value = {data.preptime}  onChange ={formChangeHandler} />
-                </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "preptime">Preparation time</Form.Label>
+                                <Form.Control type="number" id= "preptime" name= "preptime" value = {data.preptime}  onChange ={formChangeHandler} />
+                            </Form.Group>
 
-                <Form.Group>
-                    <Form.Label htmlFor = "cooktime">Cook time</Form.Label>
-                    <Form.Control type="number" id= "cooktime" name= "cooktime" value = {data.cooktime} onChange ={formChangeHandler}  />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor = "yield">Yield</Form.Label>
-                    <Form.Control type="text" id= "yield" name= "yield" value = {data.yield}  onChange ={formChangeHandler} />
-                </Form.Group>
-            
-                <Form.Group>
-                    <Form.Label htmlFor = "description">Description</Form.Label>
-                    <Form.Control type="text" name= "description" rows = {3} as ="textarea" value = {data.description}  onChange ={formChangeHandler} />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor = "keywords">Key words</Form.Label>
-                    <Form.Control type="textarea" id= "keywords" name= "keywords" value = {data.keywords}   onChange ={formChangeHandler} />
-                    <p>Separate multiple keywords with commas.</p>
-                </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "cooktime">Cook time</Form.Label>
+                                <Form.Control type="number" id= "cooktime" name= "cooktime" value = {data.cooktime} onChange ={formChangeHandler}  />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor = "yield">Yield</Form.Label>
+                                <Form.Control type="text" id= "yield" name= "yield" value = {data.yield}  onChange ={formChangeHandler} />
+                            </Form.Group>
+                        
+                            <Form.Group>
+                                <Form.Label htmlFor = "description">Description</Form.Label>
+                                <Form.Control type="text" name= "description" rows = {3} as ="textarea" value = {data.description}  onChange ={formChangeHandler} />
+                            </Form.Group>   
+                            <Form.Group>
+                                <Form.Label htmlFor = "keyWords">Key words</Form.Label>
+                                <Form.Control type="textarea" id= "keyWords" name= "keywords" value = {data.keywords}   onChange ={formChangeHandler} />
+                                <p>Separate multiple keywords with commas.</p>
+                            </Form.Group>
+                        </Col>    
+                        <Col xs={12} md={7} lg={{ span: 7, offset: 1}}>
+                            <h5>Add images</h5>
+                            {imgs.map((_, i) => {
+                                return (
+                                <div key={i}>
+                                    <Form.Group>
+                                    <Row>
+                                        <Col>
+                                            
+                                            <Form.Label htmlFor="img">{`Recipie image-${i+1} : url `}</Form.Label>
+                                            <Form.Control type="text" name="img" value = {imgs[i]} onChange={(e) => changeImgsData(e, i)} />
+                                        </Col>
+                                    </Row>
+                                    </Form.Group>
+                                </div>
+                                );
+                            })}
+                            <Button variant="outline-success" onClick={addImage}>Add more image</Button>
+
                 
-                <p>Add images</p>
-                {imgs.map((_, i) => {
-                    return (
-                    <div key={i}>
-                        <h3>{`Recipie image ${i+1} : `}</h3>
-                        <Form.Group>
-                        <Row>
-                            <Col>
-                                
-                                <Form.Label htmlFor="img">Image url</Form.Label>
-                                <Form.Control type="text" name="img" value = {imgs[i]} onChange={(e) => changeImgsData(e, i)} />
-                            </Col>
-                        </Row>
-                        </Form.Group>
-                    </div>
-                    );
-                })}
-                <Button variant="outline-success" onClick={addImage}>Add more image</Button>
+                            <h5>Add ingredients</h5>
+                            {ingredients.map((_, i) => {
+                                return (
+                                <div key={i}>
+                                    <Form.Group>
+                                    <Row>
+                                        <Col>
+                                            <Form.Label htmlFor="ingName">{`Ingredient ${i+1} : Name`}</Form.Label>
+                                            <Form.Control type="text" name="ingName" value = {ingredients[i].ingName} onChange={(e) => changeIngData(e, i)} />
+                                        </Col>
+                                        <Col>
+                                            <Form.Label htmlFor="">Quantity</Form.Label>
+                                            <Form.Control type="text"  name="quantity" value = {ingredients[i].quantity} onChange={(e) => changeIngData(e, i)}/>
+                                        </Col>
+                                        
+                                    </Row>
+                                    </Form.Group>
+                                </div>
+                                );
+                            })}
 
-               
-                <p>Add ingredients</p>
-                {ingredients.map((_, i) => {
-                    return (
-                    <div key={i}>
-                        <h3>{`Ingredient ${i+1} : `}</h3>
-                        <Form.Group>
-                        <Row>
-                            <Col>
-                                <Form.Label htmlFor="">Quantity</Form.Label>
-                                <Form.Control type="text"  name="quantity" value = {ingredients[i].quantity} onChange={(e) => changeIngData(e, i)}/>
-                            </Col>
-                            <Col>
-                                <Form.Label htmlFor="ingName">Name</Form.Label>
-                                <Form.Control type="text" name="ingName" value = {ingredients[i].ingName} onChange={(e) => changeIngData(e, i)} />
-                            </Col>
-                        </Row>
-                        </Form.Group>
-                    </div>
-                    );
-                })}
-
-                <Button variant="outline-success" onClick={addIngredient}>Add more ingredient</Button>
-                <p>Add steps</p>
-                {steps.map((_, i) => {
-                    return (
-                    <div key={i}>
-                        <Form.Group>
-                        <h3>{`Step ${i+1} : `}</h3>
-                        <Row>
-                            <Col>
-                                <Form.Label htmlFor="desc">Description </Form.Label>
-                                <Form.Control type="text"  name="desc" value = {steps[i].desc} onChange={(e) => changeStepsData(e, i)}/>
-                            </Col>
-                            <Col>
-                                <Form.Label htmlFor="img">Image</Form.Label>
-                                <Form.Control type="text" name="img" value = {steps[i].img} onChange={(e) => changeStepsData(e, i)} />
-                            </Col>
-                        </Row>
-                        </Form.Group>
-                    </div>
-                    );
-                })}
-                <Button variant="outline-success" onClick={addStep}>Add more Step</Button>
-                <Button type="submit" variant="success" value="Send data">Submit recipe</Button>
-                <div></div>
+                            <Button variant="outline-success" onClick={addIngredient}>Add more ingredient</Button>
+                            <h5>Add steps</h5>
+                            {steps.map((_, i) => {
+                                return (
+                                <div key={i}>
+                                    <Form.Group>
+                                        <Row>
+                                            <Col>
+                                                <Form.Label htmlFor="desc">{`Step ${i+1} : Description`} </Form.Label>
+                                                <Form.Control type="text"  name="desc" value = {steps[i].desc} onChange={(e) => changeStepsData(e, i)}/>
+                                            </Col>
+                                            <Col>
+                                                <Form.Label htmlFor="img">Image</Form.Label>
+                                                <Form.Control type="text" name="img" value = {steps[i].img} onChange={(e) => changeStepsData(e, i)} />
+                                            </Col>
+                                        </Row>
+                                    </Form.Group>
+                                </div>
+                                );
+                            })}
+                            <Button variant="outline-success" onClick={addStep}>Add more Step</Button>
+                        </Col>
+                    </Row>
+                    <Button type="submit" variant="success" value="Send data">Submit recipe</Button> 
+                </Container> 
             </Form>
     )
 }

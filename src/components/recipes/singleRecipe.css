@@ -1,0 +1,36 @@
+.container-wrapper{
+
+}
+.container-fluid{
+
+  }
+
+  .test{
+    background-color: #f0f0f0!important;
+      
+  }
+  .row{
+    padding: 0 10%;
+  }
+  
+.btn {
+ padding: 0px 15px;
+ margin:0
+}
+.btn-danger{
+    padding:0px 10px;
+    margin-left: 2px;
+}
+.col-12{
+    padding: 10px;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+.ing-steps{
+    background: #f0f0f0!important;
+}
+

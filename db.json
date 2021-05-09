@@ -1,15 +1,13 @@
 {
-  "recipies": [
+  "recipes": [
     {
-      "author": "ahmedd",
-      "name": "cheesy fish piee",
+      "author": "ahmed",
+      "name": "cheesy fish pie",
       "catagory": "dinner",
       "cuisine": "maxican",
       "preptime": "30",
       "cooktime": "60",
-      "yield": "4",
-      "KeyWords": "",
-      "desc": "",
+      "serve": "4",
       "ingredients": [
         {
           "id": 1,
@@ -19,7 +17,7 @@
         {
           "id": 2,
           "ingName": "200ml whole milk , plus 1 tbsp",
-          "quantity": "250ml"
+          "quantity": "200ml"
         }
       ],
       "steps": [
@@ -38,8 +36,8 @@
         "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272"
       ],
       "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
-      "keywords": "fish pie,maxican,dinner",
-      "id": 1
+      "keyWords": "fish pie,maxican,dinner",
+      "id": "1"
     },
     {
       "author": "Rahman2",
@@ -48,9 +46,7 @@
       "cuisine": "maxican",
       "preptime": "30",
       "cooktime": "60",
-      "yield": "4",
-      "KeyWords": "",
-      "desc": "",
+      "serve": "4",
       "ingredients": [
         {
           "id": 1,
@@ -59,7 +55,7 @@
         },
         {
           "id": 2,
-          "ingName": "200ml whole milk , plus 1 tbsp",
+          "ingName": "whole milk , plus 1 tbsp",
           "quantity": "200ml"
         }
       ],
@@ -79,8 +75,8 @@
         "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272"
       ],
       "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
-      "keywords": "fish pie,maxican,dinner",
-      "id": 2
+      "keyWords": "fish pie,maxican,dinner",
+      "id": "2"
     },
     {
       "author": "Rahman3",
@@ -89,9 +85,7 @@
       "cuisine": "maxican",
       "preptime": "30",
       "cooktime": "60",
-      "yield": "4",
-      "KeyWords": "",
-      "desc": "",
+      "serve": "4",
       "ingredients": [
         {
           "id": 1,
@@ -120,8 +114,8 @@
         "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272"
       ],
       "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
-      "keywords": "fish pie,maxican,dinner",
-      "id": 3
+      "keyWords": "fish pie,maxican,dinner",
+      "id": "3"
     }
   ]
 }

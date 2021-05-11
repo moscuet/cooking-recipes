@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { Form,Button,Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-//import './addRecipe.css'
+import './addRecipe.css'
 export default function AddRecipe() {
     const [data, setData] = useState({
         id:uuidv4(),
@@ -65,7 +64,6 @@ export default function AddRecipe() {
         setImgs([...imgs, '']);
       };
 
-
       const submitData = (e) => {
           e.preventDefault()
         axios.post("http://localhost:3001/recipes", data)
@@ -75,13 +73,15 @@ export default function AddRecipe() {
         } )
       };
         
-    
-    
+
+
     return (
-            <Form onSubmit={submitData}> 
-                <Container >                
+            <Container fluid > 
+                    <h1 className ="text-success title_add_recipe "> Add A Cool Recipe!</h1>                            
+                
+                <Form  onSubmit={submitData}>
                     <Row>
-                        <Col  xs={12} md={5} lg={4}>
+                        <Col className='input_col1 bg-light text-dark' xs={12} md={5} lg={4}>
                             <Form.Group>
                                 <Form.Label htmlFor = "author">author</Form.Label>
                                 <Form.Control type="ctext" id= "author" name= "author" onChange ={formChangeHandler}  />
@@ -111,8 +111,7 @@ export default function AddRecipe() {
                             <Form.Group>
                                 <Form.Label htmlFor = "yield">Yield</Form.Label>
                                 <Form.Control type="text" id= "yield" name= "yield" onChange ={formChangeHandler} />
-                            </Form.Group>
-                        
+                            </Form.Group>                        
                             <Form.Group>
                                 <Form.Label htmlFor = "description">Description</Form.Label>
                                 <Form.Control type="text" name= "description" rows = {3} as ="textarea" onChange ={formChangeHandler} />
@@ -123,8 +122,7 @@ export default function AddRecipe() {
                                 <p>Separate multiple keywords with commas.</p>
                             </Form.Group>
                         </Col>
-
-                        <Col xs={12} md={7} lg={{ span: 7, offset: 1}}>
+                        <Col className ='input_col2 bg-light text-dark' xs={12} md={6} lg={{ span: 7, offset: 1}}>
                             <h5>Add images</h5>
                             {imgs.map((_, i) => {
                                 return (
@@ -187,9 +185,10 @@ export default function AddRecipe() {
                             <Button variant="outline-success" onClick={addStep}>Add more Step</Button>
                         </Col>
                     </Row>
-                
-                    <Button type="submit" variant="success" value="Send data">Submit recipe</Button>
-                </Container>
-            </Form>
+                    <Row>
+                        <Button type="submit" variant="success" value="Send data">Submit</Button>
+                    </Row>
+               </Form>
+            </Container>
     )
 }

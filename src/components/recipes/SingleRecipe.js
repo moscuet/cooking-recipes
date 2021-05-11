@@ -5,9 +5,6 @@ import {Link,useRouteMatch} from 'react-router-dom'
 import {Button, Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock , faUtensils} from '@fortawesome/free-solid-svg-icons'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import'./singleRecipe.css'
 export default function SingleRecipe() {
     const [recipe, setrecipe] = useState();
@@ -28,8 +25,8 @@ export default function SingleRecipe() {
         }
     }
        
-    const ingredientsList = () => recipe.ingredients.map( ing =><li>- {ing.quantity} {ing.ingName}</li>)
-    const stepsList = () =>  recipe.steps.map( (step,i) => <div><h4>Step {i+1}</h4>{step.desc}</div>)
+    const ingredientsList = () => recipe.ingredients.map( ing =><li key = {ing.id}>- {ing.quantity} {ing.ingName}</li>)
+    const stepsList = () =>  recipe.steps.map( (step,i) => <div key = {step.id}><h4>Step {i+1}</h4>{step.desc}</div>)
 
     let data = undefined
     if(!recipe){
@@ -64,13 +61,14 @@ export default function SingleRecipe() {
                                     <h4>For the {recipe.name}</h4>
                                     <ul>{ingredientsList()}</ul>
                                 </Col>
-                                <Col classname = "steps_container" xs ={12} md ={6}>
+                                <Col className = "steps_container" xs ={12} md ={6}>
                                     <h2>Cooking Methods</h2>
                                     <div className="steps_div">{stepsList() }</div>
                                 </Col>
                             </Row>
                             <Row> 
                                 <div className ="button_div">
+                                    <Link to = {`/recipes`}><Button  variant="secondary" value="Send data">Go back</Button></Link> 
                                     <Link to = {`/editRecipie/${id}`}><Button variant="warning" >edit</Button></Link>  
                                     <Button variant="danger" onClick = {deleteRecipe}>delete</Button>                           
                                 </div>  

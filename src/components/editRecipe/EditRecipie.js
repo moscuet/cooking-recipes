@@ -1,8 +1,9 @@
 import React, { useState , useEffect} from "react";
 import axios from "axios";
 import { Form,Button,Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams} from 'react-router'
+import {Link} from 'react-router-dom'
+import './editRecipe.css'
 export default function EditRecipe() {
     let {id} = useParams()
     const [data, setData] = useState({
@@ -88,10 +89,10 @@ export default function EditRecipe() {
         
     
     return (
-            <Form onSubmit={submitData}>
-                 <Container >                
+            <Container fluid > 
+                <Form onSubmit={submitData}>                            
                     <Row>
-                        <Col  xs={12} md={5} lg={4}>
+                        <Col   className='input_col1 bg-light text-dark' xs={12} md={5} lg={4}>
                             <Form.Group>
                                 <Form.Label htmlFor = "author">author</Form.Label>
                                 <Form.Control type="text" id= "author"  name= "author" value = {data.author} onChange ={formChangeHandler}  />
@@ -133,7 +134,7 @@ export default function EditRecipe() {
                                 <p>Separate multiple keywords with commas.</p>
                             </Form.Group>
                         </Col>    
-                        <Col xs={12} md={7} lg={{ span: 7, offset: 1}}>
+                        <Col className ='input_col2 bg-light text-dark' xs={12} md={7} lg={{ span: 7, offset: 1}}>
                             <h5>Add images</h5>
                             {imgs.map((_, i) => {
                                 return (
@@ -197,8 +198,11 @@ export default function EditRecipe() {
                             <Button variant="outline-success" onClick={addStep}>Add more Step</Button>
                         </Col>
                     </Row>
-                    <Button type="submit" variant="success" value="Send data">Submit recipe</Button> 
-                </Container> 
-            </Form>
+                    <Row>
+                        <Link to = {`/recipes/${id}`}><Button  variant="secondary" value="Send data">Go back</Button></Link> 
+                        <Button type="submit" variant="success" value="Send data">Submit</Button> 
+                    </Row>
+                </Form>
+            </Container> 
     )
 }

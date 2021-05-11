@@ -68,7 +68,8 @@ function RegistrationForm(props) {
         }
     }
     return(
-        <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
+        <div className ="registration">
+            <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
             <form>
                 <div className="form-group text-left">
                 <label htmlFor="exampleInputEmail1">Email address</label>
@@ -118,6 +119,7 @@ function RegistrationForm(props) {
                 <span className="loginText" onClick={() => redirectToLogin()}>Login here</span> 
             </div>
             
+        </div>
         </div>
     )
 }

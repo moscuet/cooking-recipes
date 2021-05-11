@@ -4,8 +4,13 @@
     padding-top:100px;
     
 }
-form {
+.login_form {
     width:100%;
     min-width:300px;
     max-width: 600px;
+}
+.login_div {
+    width:100%;
+    display: flex;
+    justify-content: center ;
 }

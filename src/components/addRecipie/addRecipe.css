@@ -4,11 +4,31 @@ h5 {
 h5:first-child{
     margin-top:0px
 }
+.title_add_recipe{
+ text-align: center;
+ margin:10px 0px;
+}
 .submit_div {
     text-align: center;
 }
 
+.header_add_recipe{
+    padding:10px;
+    text-align: center;
+}
+.container-fluid {
+    max-width: '100%';
+  }
+  .input_col1, .input_col2 {
+   /* border:5px solid green !important; */
+   margin: 20px 0px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-.container {
-    max-width: '100%'
+  }
+
+  /* .col-lg-4, .col-md-5 {
+    margin-right: 40px;
+  } */
+  .outline-success{
+      width: 200px;
   }

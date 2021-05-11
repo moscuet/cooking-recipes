@@ -8,3 +8,14 @@
     color: green;
     font-weight: bold;
 }
+
+.login_div {
+    width:100%;
+    display: flex;
+    justify-content: center ;
+}
+.registration {
+    width:100%;
+    display: flex;
+    justify-content: center ;
+}

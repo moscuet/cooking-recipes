@@ -4,7 +4,8 @@ footer {
     background: #222;
     color: #aaa;
     padding-top: 10px;
-    box-sizing: border-box;
+    margin-top:20px;
+    
   }
   
   footer a {

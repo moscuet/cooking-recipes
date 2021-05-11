@@ -1,0 +1,37 @@
+h5 {
+    margin-top:20px ;
+}
+h5:first-child{
+    margin-top:0px
+}
+.submit_div {
+    text-align: center;
+}
+
+.title_update_recipe {
+    text-align: center;
+    
+}
+
+.container-fluid {
+    max-width: '100%';
+  }
+  .input_col1, .input_col2 {
+   /* border:5px solid green !important; */
+   margin: 20px 0px;
+
+  }
+
+  .col-lg-4, .col-md-5 {
+    margin-right: 20px;
+  }
+  .btn {
+      margin-right: 5px;
+      width:100px;
+  }
+  .btn-outline-success{
+      min-width:150px;
+      width:140px
+
+  }
+  

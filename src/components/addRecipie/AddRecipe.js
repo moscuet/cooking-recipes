@@ -80,8 +80,8 @@ export default function AddRecipe() {
                     <h1 className ="text-success title_add_recipe "> Add A Cool Recipe!</h1>                            
                 
                 <Form  onSubmit={submitData}>
-                    <Row>
-                        <Col className='input_col1 bg-light text-dark' xs={12} md={5} lg={4}>
+                    <Row fluid>
+                        <Col className='input_col1 bg-light text-dark' xs={12} md={12} lg={{ span: 4, offset: 0}}>
                             <Form.Group>
                                 <Form.Label htmlFor = "author">author</Form.Label>
                                 <Form.Control type="ctext" id= "author" name= "author" onChange ={formChangeHandler}  />
@@ -122,7 +122,7 @@ export default function AddRecipe() {
                                 <p>Separate multiple keywords with commas.</p>
                             </Form.Group>
                         </Col>
-                        <Col className ='input_col2 bg-light text-dark' xs={12} md={6} lg={{ span: 7, offset: 1}}>
+                        <Col className ='input_col2 bg-light text-dark' xs={12} md={12} lg={{ span: 7, offset: 0}}>
                             <h5>Add images</h5>
                             {imgs.map((_, i) => {
                                 return (

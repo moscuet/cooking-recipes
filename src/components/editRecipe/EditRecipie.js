@@ -4,6 +4,7 @@ import { Form,Button,Container, Row, Col } from 'react-bootstrap';
 import { useParams} from 'react-router'
 import {Link} from 'react-router-dom'
 import './editRecipe.css'
+import SubHeader from '../header/SubHeader'
 export default function EditRecipe() {
     let {id} = useParams()
     const [data, setData] = useState({
@@ -89,6 +90,11 @@ export default function EditRecipe() {
         
     
     return (
+        <>
+            <SubHeader 
+                    title = "Edit recipe "
+                    text="Keep Your recipe updated"
+            />
             <Container fluid > 
                 <Form onSubmit={submitData}>                            
                     <Row>
@@ -204,5 +210,6 @@ export default function EditRecipe() {
                     </Row>
                 </Form>
             </Container> 
+        </>
     )
 }

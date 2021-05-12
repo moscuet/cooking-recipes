@@ -3,18 +3,11 @@ import React from 'react'
 
 import Logo from './logo.svg';
 import './header.css'
+import NavBar from '../nav/NavBar'
 
-import Nav from '../nav/Nav'
-
-function Header() {
-    return (
-      <div className = 'header'>
-            <div className="image_div"><img src={Logo} alt = 'portfolio_logo'/></div>
-            <Nav/>      
-      </div>
-        
-       
-
+function Header(title) {
+    return (  
+        <NavBar/>
     );
   }
   export default Header 

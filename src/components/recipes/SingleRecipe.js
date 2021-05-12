@@ -69,7 +69,7 @@ export default function SingleRecipe() {
                             <Row> 
                                 <div className ="button_div">
                                     <Link to = {`/recipes`}><Button  variant="secondary" value="Send data">Go back</Button></Link> 
-                                    <Link to = {`/editRecipie/${id}`}><Button variant="warning" >edit</Button></Link>  
+                                    <Link to = {`/editRecipe/${id}`}><Button variant="warning" >edit</Button></Link>  
                                     <Button variant="danger" onClick = {deleteRecipe}>delete</Button>                           
                                 </div>  
                             </Row>

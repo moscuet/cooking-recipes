@@ -3,12 +3,13 @@ import axios from 'axios';
 import './login.css';
 //import {API_BASE_URL, ACCESS_TOKEN_NAME} from '../../constants/apiConstants';
 import { withRouter } from "react-router-dom";
-//import Row from 'react-bootstrap/Row'
+import SubHeader from '../header/SubHeader'
 function Login(props) {
     const [state , setState] = useState({
         email : "",
         password : "",
-        successMessage: null
+        successMessage: null,
+        
     })
     const handleChange = (e) => {
         const {id , value} = e.target   
@@ -55,8 +56,13 @@ function Login(props) {
         props.history.push('/register'); 
        // props.updateTitle('Register');
     }
-    return(       
-         <div className="login_div">
+    return(
+        <>   
+            <SubHeader
+            title="Login to your Account"
+            text=" If You don't have an account, please register"
+             />
+            <div className="login_div">
             <div className="login_div card col-12 col-lg-4 login-card mt-2 hv-center">
               <form >
                   <div className="form-group text-left">
@@ -98,13 +104,8 @@ function Login(props) {
               </div>
           </div>
          </div>
-        
+         </>  
     )
 }
 
 export default withRouter(Login);
-
-
-//npm install -D json-server json-server-auth
-// npx json-server db.json -m ./node_modules/json-server-auth --port 3001
-//npx json-server-auth db.json --port 3001

@@ -1,3 +1,6 @@
 .active{
     color:greenyellow
 }
+.text-primary{
+    justify-content: space-between;
+}

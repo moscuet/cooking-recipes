@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { Form,Button,Container, Row, Col } from 'react-bootstrap';
 import './addRecipe.css'
+import SubHeader from '../header/SubHeader'
 export default function AddRecipe() {
     const [data, setData] = useState({
         id:uuidv4(),
@@ -76,12 +77,15 @@ export default function AddRecipe() {
 
 
     return (
-            <Container fluid > 
-                    <h1 className ="text-success title_add_recipe "> Add A Cool Recipe!</h1>                            
-                
+            <>
+                <SubHeader 
+                    title = "Add a cool recipe! "
+                    text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'!"
+                />
+                <Container fluid >                 
                 <Form  onSubmit={submitData}>
-                    <Row fluid>
-                        <Col className='input_col1 bg-light text-dark' xs={12} md={12} lg={{ span: 4, offset: 0}}>
+                    <Row >
+                        <Col className='input_col1 bg-light text-dark' xs={12} md={12} lg={{ span: 5}}>
                             <Form.Group>
                                 <Form.Label htmlFor = "author">author</Form.Label>
                                 <Form.Control type="ctext" id= "author" name= "author" onChange ={formChangeHandler}  />
@@ -122,7 +126,7 @@ export default function AddRecipe() {
                                 <p>Separate multiple keywords with commas.</p>
                             </Form.Group>
                         </Col>
-                        <Col className ='input_col2 bg-light text-dark' xs={12} md={12} lg={{ span: 7, offset: 0}}>
+                        <Col className ='input_col2 bg-light text-dark' xs={12} md={12} lg={{ span: 7}}>
                             <h5>Add images</h5>
                             {imgs.map((_, i) => {
                                 return (
@@ -190,5 +194,6 @@ export default function AddRecipe() {
                     </Row>
                </Form>
             </Container>
+           </>
     )
 }

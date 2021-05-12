@@ -1,4 +1,6 @@
-.header {
+
+
+/* .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,4 +16,25 @@
 
 .image_div {
     padding-bottom: 5px;
+}
+.navbarDiv{
+    display: flex;
+    justify-content: space-between !important;
+} */
+
+.headerBody{
+    min-height:250px;
+    width :100%;
+    display: flex;
+    justify-content: center;
+    color:#1d1145;
+    background: #fafafa;
+}
+
+.headerText {
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:2rem 0;
 }

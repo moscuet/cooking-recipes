@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-
+.App{
+ 
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,3 +19,49 @@
   color: #61dafb;
 }
 
+
+:root {
+  --primaryColor: #ff3921;
+  --mainWhite: #fff;
+  --offWhite: #f2f2f2;
+  --mainBlack: #10131a;
+  --backgroundGrey: #fafafa;
+  --darkGrey: #707070;
+  --mainTransition: all 0.3s linear;
+  --lightShadow: 0px 3px 10px #00000033;
+  --deepPurple:#1d1145
+
+  /* Letter spacing ( example: letter-spacing: var(--big)) */ ;
+  --smallest-: 0px;
+  --medium: 1.2px;
+  --big: 1.7px;
+  --biggest: 2.5px;
+/* Font weight  */
+  --regular : 400;
+  --bold: 700;
+/*  header font sizes */
+  --heroHeader:49px;
+  --sectionHeader: 34px;
+  --serviceCardHeader:22px;
+  --blogHeader: 34px;
+/* Text font sizes */
+  --heroText:20px;
+  --sectionText: 18px;
+  --serviceCardText: 20px;
+  --buttonText: 24px;
+}
+
+@media only screen and (max-width: 1167px) {
+  :root {
+  /*  header font sizes */
+  --heroHeader:calc(36px + 13 * ((100vw - 320px) / 847));
+  --sectionHeader: calc(28px + 6 * ((100vw - 320px) / 847));
+  --serviceCardHeader: calc(18px + 4 * ((100vw - 320px) / 847));
+  --blogHeader: calc(36px + 13 * ((100vw - 320px) / 847));
+ /* Text font sizes */
+  --heroText:calc(16px + 4 * ((100vw - 320px) / 847));
+  --sectionText: calc(14px + 4 * ((100vw - 320px) / 847));
+  --serviceCardText: calc(18px + 4 * ((100vw - 320px) / 847));
+  --buttonText: calc(18px + 6 * ((100vw - 320px) / 847));
+  }
+   }

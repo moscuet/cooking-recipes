@@ -10,7 +10,7 @@ import AddRecipie from '../addRecipie/AddRecipe'
 import EditRecipie from '../editRecipe/EditRecipie'
 import RegistrationForm from '../login/RegistrationForm'
 import Login from '../login/Login'
-//import ContactPage from '../contactPage/index'
+import ContactPage from '../contactPage/Contact'
 const Main = (props) => {
   const [recipes, setRecipes] = useState([])
   const [searchedRecipes, setSearchedRecipes] = useState([])
@@ -77,11 +77,11 @@ const Main = (props) => {
         <Route path='/recipes/:id'> <SingleRecipe/></Route>
         <Route path="/recipes" render={() => (<Recipes recipes ={searchedRecipes} inputHandler = {searchInputHandler}/>)} ></Route>
         <Route path="/about" component={About}></Route>
-        <Route path="/addRecipie"><AddRecipie formSubmit = {formSubmitHandler} formChangeHandler = {formChangeHandler}/></Route>
-        <Route path="/editRecipie/:id"><EditRecipie  /></Route>
+        <Route path="/addRecipe"><AddRecipie formSubmit = {formSubmitHandler} formChangeHandler = {formChangeHandler}/></Route>
+        <Route path="/editRecipe/:id"><EditRecipie  /></Route>
         <Route path="/login"><Login/></Route>
         <Route path="/register"><RegistrationForm/></Route>
-        {/* <Route path="/contact"><ContactPage/></Route> */}
+        <Route path="/contact"><ContactPage/></Route>
 
       </Switch>
     </div>

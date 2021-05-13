@@ -69,7 +69,6 @@ const Main = (props) => {
         console.log(res.data)
       })
   }  
-const recipeById = id => recipes.find( recipe =>recipe.id===id)
 
 
   return (

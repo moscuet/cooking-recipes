@@ -96,7 +96,7 @@ const history = useHistory()
          //.then( <Redirect to = '/'/>) 
          //.then(props.history.push(`/recipes/${id}`))
          .then( response=> {
-             history.push('/')
+             history.push(`/recipes/${id}`)
          } )
       };
         //window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`

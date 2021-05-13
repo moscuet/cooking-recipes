@@ -16,7 +16,6 @@ function EditRecipe(props) {
 
 
 
-    let history = useHistory();
     let {id} = useParams()
     const [data, setData] = useState({
         id:"",

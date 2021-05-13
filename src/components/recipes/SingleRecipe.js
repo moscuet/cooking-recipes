@@ -11,14 +11,14 @@ export default function SingleRecipe() {
    const  {id} = useParams()
    useEffect(() => {
         if(!recipe){
-            axios.get(`http://localhost:3001/recipes/${id}`)
+            axios.get(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
             .then( response => setrecipe(response.data))
         }
     }) 
     const deleteRecipe = () =>{
         if(window.confirm('Are you sure you want to delete?')){
-            axios.delete(`http://localhost:3001/recipes/${id}`)
-            .then ( response => window.location.replace('http://localhost:3000/recipes') )
+            axios.delete(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
+            .then ( response => window.location.replace('https://json-recipes-server.herokuapp.com/recipes') )
         }
     }
        

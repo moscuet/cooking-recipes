@@ -35,6 +35,7 @@ export default function EditRecipe() {
           //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
           axios.get('https://json-recipes-server.herokuapp.com/recipes')
          .then( response =>{
+             console.log('singledata',response.data)
             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
             console.log(targetRecipe)
             setData(targetRecipe)

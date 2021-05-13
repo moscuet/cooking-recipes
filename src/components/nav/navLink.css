@@ -1,6 +1,9 @@
-.active{
+.navbar-nav .active{
     color:greenyellow
 }
 .text-primary{
     justify-content: space-between;
+}
+.navbar-nav a {
+    color:black
 }

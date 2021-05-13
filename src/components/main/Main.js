@@ -38,8 +38,9 @@ const Main = (props) => {
   useEffect( ()=>{
     const getData = async () =>{
       //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
-      axios.get('https://json-recipes-server.herokuapp.com/recipes')
+      axios.get('https://sheltered-thicket-21153.herokuapp.com/https://json-recipes-server.herokuapp.com/recipes')
      .then( response =>{
+       console.log('dta from heroku',response.data)
       setRecipes(response.data)
       setSearchedRecipes(response.data)
      })
@@ -68,13 +69,14 @@ const Main = (props) => {
         console.log(res.data)
       })
   }  
+const recipeById = id => recipes.find( recipe =>recipe.id===id)
 
 
   return (
     <div className = 'main_div'>
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path='/recipes/:id'> <SingleRecipe/></Route>
+        <Route path='/recipes/:id'> <SingleRecipe recipes= {recipes}/></Route>
         <Route path="/recipes" render={() => (<Recipes recipes ={searchedRecipes} inputHandler = {searchInputHandler}/>)} ></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/addRecipe"><AddRecipie formSubmit = {formSubmitHandler} formChangeHandler = {formChangeHandler}/></Route>

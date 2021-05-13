@@ -6,8 +6,6 @@ import {Link} from 'react-router-dom'
 import './editRecipe.css'
 import { withRouter } from "react-router-dom";
 
-import { useHistory } from "react-router-dom";
-
 
 
 function EditRecipe(props) {

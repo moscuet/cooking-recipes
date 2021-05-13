@@ -4,7 +4,13 @@ import { Form,Button,Container, Row, Col } from 'react-bootstrap';
 import { useParams} from 'react-router'
 import {Link} from 'react-router-dom'
 import './editRecipe.css'
+
+import { useHistory } from "react-router-dom";
+
+
+
 export default function EditRecipe() {
+    let history = useHistory();
     let {id} = useParams()
     const [data, setData] = useState({
         id:"",
@@ -82,11 +88,11 @@ export default function EditRecipe() {
 
       const submitData = (e) => {
           e.preventDefault()
-        axios.put(`https://json-recipes-server.herokuapp.com/recipes/${id}`, data)
-        .then( response => window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`)
+         axios.put(`https://json-recipes-server.herokuapp.com/recipes/${id}`, data)
+         .then( history.push(`/recipes/${id}`) 
         )
       };
-        
+        //window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`
     
     return (
             <Container fluid > 

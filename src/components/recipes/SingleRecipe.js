@@ -30,7 +30,7 @@ export default function SingleRecipe() {
         data= <p> Loading data..</p>
         }
         else{ 
-            data =  <div className = "container-wrapper">
+            data =  <div className = "single-recipe-wrapper">
                         <Container fluid>
                             <Row  >
                                 <Col xs ={12} md ={7} lg ={7}>

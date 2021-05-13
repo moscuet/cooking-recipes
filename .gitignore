@@ -1,5 +1,6 @@
 /node_modules
 backupdb.json
 utils
-appContextApi
-src/contactPage
+src/components/appContextApi
+json_server_recipes
+recipes_server

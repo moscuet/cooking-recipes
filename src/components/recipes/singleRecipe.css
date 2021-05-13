@@ -4,6 +4,13 @@
 .container-fluid{
 
   }
+  .single-recipe-wrapper{
+    text-transform: lowercase;
+  }
+
+  .single-recipe-wrapper:first-letter{
+    text-transform: capitalize;
+  }
 
   .test{
     background-color: #f0f0f0!important;

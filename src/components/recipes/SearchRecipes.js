@@ -8,8 +8,7 @@ const SearchBar = styled.section`
         min-width: 300px;
         width:30%;
     `;
-export default function SearchRecipes({inputHandler}) {
-    
+export default function SearchRecipes({inputHandler}) {    
     return (
         <SearchBar>
             <Form.Group>

@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import './registrationForm.css';
-//import {API_BASE_URL, ACCESS_TOKEN_NAME} from '../../constants/apiConstants';
 import { withRouter } from "react-router-dom";
 import SubHeader from '../header/SubHeader'
 function RegistrationForm(props) {
-    console.log('history',props)
     const [state , setState] = useState({
         email : "",
         password : "",
@@ -27,7 +25,6 @@ function RegistrationForm(props) {
                 "email":state.email,
                 "password":state.password
             }
-            console.log(payload)
             axios.post('http://localhost:3001/users', payload)
                 .then(function (response) {
                     if(response.status === 201){

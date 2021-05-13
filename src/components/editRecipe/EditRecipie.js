@@ -27,7 +27,7 @@ export default function EditRecipe() {
       useEffect( ()=>{
         const getData = async () =>{
           //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
-          axios.get('http://localhost:3001/recipes')
+          axios.get('https://json-recipes-server.herokuapp.com/recipes')
          .then( response =>{
             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
             console.log(targetRecipe)
@@ -82,8 +82,8 @@ export default function EditRecipe() {
 
       const submitData = (e) => {
           e.preventDefault()
-        axios.put(`http://localhost:3001/recipes/${id}`, data)
-        .then( response => window.location.replace(`http://localhost:3000/recipes/${id}`)
+        axios.put(`https://json-recipes-server.herokuapp.com/recipes/${id}`, data)
+        .then( response => window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`)
         )
       };
         
@@ -119,9 +119,6 @@ export default function EditRecipe() {
                                 <Form.Label htmlFor = "cooktime">Cook time</Form.Label>
                                 <Form.Control type="number" id= "cooktime" name= "cooktime" value = {data.cooktime} onChange ={formChangeHandler}  />
                             </Form.Group>
-                        
-
-                            {/* ################### */}
                             
                             <Form.Group>
                                 <Form.Label htmlFor = "yield">Yield</Form.Label>

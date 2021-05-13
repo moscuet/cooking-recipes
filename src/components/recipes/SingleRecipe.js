@@ -1,17 +1,14 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router'
-import {Link,useRouteMatch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Button, Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock , faUtensils} from '@fortawesome/free-solid-svg-icons'
 import'./singleRecipe.css'
 export default function SingleRecipe() {
     const [recipe, setrecipe] = useState();
-    //const [toHome, setToHome] = useState(false)
    const  {id} = useParams()
-   let {url} = useRouteMatch()
-  console.log(url)
    useEffect(() => {
         if(!recipe){
             axios.get(`http://localhost:3001/recipes/${id}`)
@@ -25,9 +22,9 @@ export default function SingleRecipe() {
         }
     }
        
-    const ingredientsList = () => recipe.ingredients.map( ing =><li key = {ing.id}>- {ing.quantity} {ing.ingName}</li>)
-    const stepsList = () =>  recipe.steps.map( (step,i) => <div key = {step.id}><h4>Step {i+1}</h4>{step.desc}</div>)
-
+   const ingredientsList = () => recipe.ingredients.map( ing =><li key = {ing.id}>- {ing.quantity} {ing.ingName}</li>)
+    const stepsList = () =>  recipe.steps.map( (step,i) => <div key = {step.id}><h5>Step {i+1}</h5>{step.desc}</div>)
+     const imgList = () =>recipe.image.map( (im,i)=> <div key = {i} className = "img_div"> <img src={im} alt ={`recipe pic number ${i}`}/> </div>)
     let data = undefined
     if(!recipe){
         data= <p> Loading data..</p>
@@ -35,11 +32,11 @@ export default function SingleRecipe() {
         else{ 
             data =  <div className = "container-wrapper">
                         <Container fluid>
-                            <Row className ='test' >
-                                <Col xs ={12} md ={6} lg ={4}>
-                                    <div className = "img_div"><img src={recipe.image[0]} alt ='recipe pic'/></div>
+                            <Row  >
+                                <Col xs ={12} md ={7} lg ={7}>
+                                    <div  className= 'imgs'> {imgList()}</div>
                                 </Col>
-                                <Col xs={12} md ={6} lg ={8}>
+                                <Col xs={12} md ={4} lg ={4}>
                                     <h1>{recipe.name}</h1>
                                     <p style ={{color:'green'}}>{recipe.author? 'By '+recipe.author:''}</p>
                                     <Row>
@@ -57,12 +54,12 @@ export default function SingleRecipe() {
                             </Row>
                             <Row >
                                 <Col xs ={12} md ={6}>
-                                    <h2>Ingredients</h2>
+                                    <h3>Ingredients</h3>
                                     <h4>For the {recipe.name}</h4>
                                     <ul>{ingredientsList()}</ul>
                                 </Col>
                                 <Col className = "steps_container" xs ={12} md ={6}>
-                                    <h2>Cooking Methods</h2>
+                                    <h3>Cooking Methods</h3>
                                     <div className="steps_div">{stepsList() }</div>
                                 </Col>
                             </Row>

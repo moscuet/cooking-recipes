@@ -26,3 +26,11 @@ ul li {
     background: #f0f0f0!important;
 }
 
+.imgs {
+  border-radius: 5px;
+  overflow: hidden;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

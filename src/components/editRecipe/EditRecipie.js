@@ -4,7 +4,6 @@ import { Form,Button,Container, Row, Col } from 'react-bootstrap';
 import { useParams} from 'react-router'
 import {Link} from 'react-router-dom'
 import './editRecipe.css'
-import SubHeader from '../header/SubHeader'
 export default function EditRecipe() {
     let {id} = useParams()
     const [data, setData] = useState({
@@ -16,15 +15,15 @@ export default function EditRecipe() {
         preptime:"",
         cooktime:"",
         yield:"",
-        keyWords:"",
+        keywords:"",
         description: "",
-        ingredients:[{}],
-        steps:[{}],
-        image:[''],
+        ingredients:[{ id: 1, ingName: "asdsd", quantity: "sad" }],
+        steps:[{ id: 1, desc: "dsd", img: "dsad" }],
+        image:['sample.com'],
       });
-      const [ingredients, setIngredients] = useState([{ id: 1, ingName: "", quantity: "" }])
-      const [steps, setSteps] = useState([{ id: 1, desc: "", img: "" },])
-      const [imgs, setImgs] = useState([""])
+      const [ingredients, setIngredients] = useState([{ id: 1, ingName: "sfs", quantity: "dsfs" }])
+      const [steps, setSteps] = useState([{ id: 1, desc: "sfs", img: "sfsf" },])
+      const [imgs, setImgs] = useState(["sdsdsd.com"])
       useEffect( ()=>{
         const getData = async () =>{
           //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
@@ -90,11 +89,6 @@ export default function EditRecipe() {
         
     
     return (
-        <>
-            <SubHeader 
-                    title = "Edit recipe "
-                    text="Keep Your recipe updated"
-            />
             <Container fluid > 
                 <Form onSubmit={submitData}>                            
                     <Row>
@@ -125,11 +119,14 @@ export default function EditRecipe() {
                                 <Form.Label htmlFor = "cooktime">Cook time</Form.Label>
                                 <Form.Control type="number" id= "cooktime" name= "cooktime" value = {data.cooktime} onChange ={formChangeHandler}  />
                             </Form.Group>
+                        
+
+                            {/* ################### */}
+                            
                             <Form.Group>
                                 <Form.Label htmlFor = "yield">Yield</Form.Label>
                                 <Form.Control type="text" id= "yield" name= "yield" value = {data.yield}  onChange ={formChangeHandler} />
-                            </Form.Group>
-                        
+                            </Form.Group> 
                             <Form.Group>
                                 <Form.Label htmlFor = "description">Description</Form.Label>
                                 <Form.Control type="text" name= "description" rows = {3} as ="textarea" value = {data.description}  onChange ={formChangeHandler} />
@@ -203,6 +200,7 @@ export default function EditRecipe() {
                             })}
                             <Button variant="outline-success" onClick={addStep}>Add more Step</Button>
                         </Col>
+                    
                     </Row>
                     <Row>
                         <Link to = {`/recipes/${id}`}><Button  variant="secondary" value="Send data">Go back</Button></Link> 
@@ -210,6 +208,5 @@ export default function EditRecipe() {
                     </Row>
                 </Form>
             </Container> 
-        </>
     )
 }

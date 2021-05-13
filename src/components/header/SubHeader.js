@@ -1,6 +1,5 @@
 
-import React, { Children } from 'react'
-import Row from 'react-bootstrap/Row'
+import React from 'react'
 import './header.css'
 const SubHeader = ({title,text,children})=>{
     return(

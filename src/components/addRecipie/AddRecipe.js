@@ -14,7 +14,7 @@ export default function AddRecipe() {
         preptime:"",
         cooktime:"",
         yield:"",
-        KeyWords:"",
+        keyWords:"",
         description: "",
         ingredients:[{}],
         steps:[{}],

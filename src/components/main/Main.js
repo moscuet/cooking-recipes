@@ -12,6 +12,7 @@ import RegistrationForm from '../login/RegistrationForm'
 import Login from '../login/Login'
 import ContactPage from '../contactPage/Contact'
 const Main = (props) => {
+ 
   const [recipes, setRecipes] = useState([])
   const [searchedRecipes, setSearchedRecipes] = useState([])
   const [newRecipe, setNewRecipe] = useState({
@@ -34,7 +35,7 @@ const Main = (props) => {
       steps:[]
     }
   })
-
+ 
   useEffect( ()=>{
     const getData = async () =>{
       //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
@@ -75,7 +76,7 @@ const Main = (props) => {
     <div className = 'main_div'>
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path='/recipes/:id'> <SingleRecipe recipes= {recipes}/></Route>
+        <Route path='/recipes/:id'> <SingleRecipe /></Route>
         <Route path="/recipes" render={() => (<Recipes recipes ={searchedRecipes} inputHandler = {searchInputHandler}/>)} ></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/addRecipe"><AddRecipie formSubmit = {formSubmitHandler} formChangeHandler = {formChangeHandler}/></Route>

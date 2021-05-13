@@ -2,6 +2,9 @@ import React from 'react'
 import {Link, useRouteMatch} from 'react-router-dom'
 import './recipeCard.css'
 export default function Recipe({recipe}) {
+    const { path } = useRouteMatch();
+  console.log(path) 
+
     let {url} = useRouteMatch()
     return (
         <div className="recipe-box">

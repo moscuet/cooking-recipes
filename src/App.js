@@ -11,13 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = ()=> {
     return (
-      <div className="App" >
-          <Router>
-            <Header/>
-            <Main/>
-            <Footer/>
-          </Router>
-      </div>
+      <Router>
+        <div className="App" >       
+              <Header/>
+              <Main/>
+              <Footer/>       
+        </div>
+      </Router>
     );
   };
 

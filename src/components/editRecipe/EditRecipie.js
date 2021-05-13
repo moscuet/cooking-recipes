@@ -1,16 +1,16 @@
 import React, { useState , useEffect} from "react";
 import axios from "axios";
 import { Form,Button,Container, Row, Col } from 'react-bootstrap';
-import { useParams} from 'react-router'
+import { useParams, useHistory} from 'react-router'
 import {Link} from 'react-router-dom'
 import './editRecipe.css'
-import { withRouter } from "react-router-dom";
+//import { withRouter } from "react-router-dom";
 
 
 
 function EditRecipe(props) {
 
-
+const history = useHistory()
 
 
 
@@ -95,7 +95,9 @@ function EditRecipe(props) {
          axios.put(`https://json-recipes-server.herokuapp.com/recipes/${id}`, data)
          //.then( <Redirect to = '/'/>) 
          //.then(props.history.push(`/recipes/${id}`))
-         .then( response=> window.location.replace(`/recipes/${id}`) )
+         .then( response=> {
+             history.push('/')
+         } )
       };
         //window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`
     
@@ -219,4 +221,5 @@ function EditRecipe(props) {
     )
 }
 
-export default withRouter(EditRecipe)
+export default EditRecipe
+//export default withRouter(EditRecipe)

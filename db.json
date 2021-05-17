@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": "689b9dfa-8d55-4385-896a-50fdf5cea4eb",
-      "author": "Rahman",
+      "author": "Rahmanaaa",
       "name": "cheesy fish pie with kale",
       "catagory": "dinner",
       "cuisine": "Maxican",
@@ -42,83 +42,301 @@
       "keywords": "fish pie,maxican,dinner"
     },
     {
-      "id": "928ec028-0a1a-4220-af5b-133d866eb827",
-      "author": "Katy Greenwood",
-      "name": "Mexican chicken burger",
-      "catagory": "Burger",
-      "cuisine": "",
-      "preptime": "10",
-      "cooktime": "10",
-      "yield": "1",
+      "id": "d120981b-2855-4ddf-8961-07b5af80e36c",
+      "author": "Rahmanaaa",
+      "name": "cheesy fish pie with kale",
+      "catagory": "dinner",
+      "cuisine": "Maxican",
+      "preptime": "30",
+      "cooktime": "45",
+      "yield": "4",
       "keyWords": "",
-      "description": "Ready in under 20 minutes, this burger with spiced chipotle chicken breast, in toasted brioche with guacamole, makes for a satisfying weeknight treat for one",
+      "description": "Double the ingredients in this easy fish pie if you need to feed four, or quadruple for eight. This comforting dinner is perfect for midweek, and adaptable for any situation",
       "ingredients": [
         {
           "id": 1,
-          "ingName": " chicken breast",
-          "quantity": "1"
+          "ingName": "Maris Piper potatoes , cut into chunks",
+          "quantity": "200gm"
         },
         {
           "id": 2,
-          "ingName": "chipotle paste",
-          "quantity": "1 tsp"
-        },
-        {
-          "id": 3,
-          "ingName": "lime, juiced",
-          "quantity": "1"
-        },
-        {
-          "id": 4,
-          "ingName": " slices cheese",
-          "quantity": "1-2"
-        },
-        {
-          "id": 5,
-          "ingName": "brioche bun, split",
-          "quantity": "1"
-        },
-        {
-          "id": 6,
-          "ingName": "avocado",
-          "quantity": "½ "
-        },
-        {
-          "id": 7,
-          "ingName": "cherry tomatoes, chopped",
-          "quantity": "2"
-        },
-        {
-          "id": 8,
-          "ingName": "pickled jalapeño slices, chopped",
-          "quantity": "3-4"
-        },
-        {
-          "id": 9,
-          "ingName": "small garlic clove, finely grated",
-          "quantity": "½"
+          "ingName": "200ml whole milk , plus 1 tbsp",
+          "quantity": "200ml"
         }
       ],
       "steps": [
         {
           "id": 1,
-          "desc": "Put the chicken breast between two pieces of cling film and bash with a rolling pin or pan to about 1cm thick. Mix the chipotle paste with half the lime juice and spread over the chicken.",
+          "desc": "Sprinkle in 1 tsp turmeric, then add 4 chicken breasts, cut into large chunks, and 4 tbsp curry paste. Cook until aromatic.",
           "img": ""
         },
         {
           "id": 2,
-          "desc": "Heat a griddle pan over a high heat. Once hot, cook the chicken for 3 mins each side until cooked through, adding the cheese for the final 2 mins of cooking. Add the bun, cut-side down, to the griddle pan to toast lightly. Season the chicken.",
-          "img": ""
-        },
-        {
-          "id": 3,
-          "desc": "Meanwhile, mash the avocado with the remaining lime juice. Stir in the cherry tomatoes, jalapeño and garlic, and season with a little salt. Spread over the base of the bun, then add the chicken followed by the top of the bun.",
+          "desc": "Heat 25g butter in a saucepan and cook 1 finely sliced large onion with 1 bay leaf, 3 cardamom pods and 1 small cinnamon stick for 10 mins.",
           "img": ""
         }
       ],
       "image": [
-        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-chicken-burger-092a6e0.jpg?quality=90&webp=true&resize=300,272"
-      ]
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272",
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272"
+      ],
+      "keywords": "fish pie,maxican,dinner"
+    },
+    {
+      "id": "f98304ac-5425-44c3-835d-630dad398239",
+      "author": "Esther Clark",
+      "name": "Beef curry",
+      "catagory": "Curry",
+      "cuisine": "Indian",
+      "preptime": "20",
+      "cooktime": "120",
+      "yield": "4",
+      "keyWords": "",
+      "description": "Make our easy beef curry and serve with a hunk of naan bread to mop up the delicious juices. If you prefer it less spicy, simply add less chilli powder",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingName": "oil",
+          "quantity": "2 bsp"
+        },
+        {
+          "id": 2,
+          "ingName": "diced braising steak",
+          "quantity": "500 g"
+        },
+        {
+          "id": 3,
+          "ingName": "butter",
+          "quantity": "1 tbsp"
+        },
+        {
+          "id": 4,
+          "ingName": "butter",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 5,
+          "ingName": "large onion , chopped",
+          "quantity": "1"
+        },
+        {
+          "id": 6,
+          "ingName": "garlic cloves , crushed",
+          "quantity": "2"
+        },
+        {
+          "id": 7,
+          "ingName": "thumb sized piece of ginger , finely grated",
+          "quantity": "1"
+        },
+        {
+          "id": 8,
+          "ingName": "hot chilli powder",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 9,
+          "ingName": " ground coriander",
+          "quantity": "1 tsp"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "desc": "Heat one tbsp of the oil in a casserole pot over a medium-high heat. Season the beef and fry in the pot for 5-8 mins, turning with a pair of tongs half way until evenly browned. Set aside on a plate.",
+          "img": ""
+        },
+        {
+          "id": 2,
+          "desc": "Heat the remaining oil and butter in the pan and add the onions. Fry gently for 15 mins or until golden brown and caramelised. Add the garlic, ginger, chilli, turmeric, ground coriander and cardamom and fry for two mins. Tip in the tomatoes, stock and sugar and bring to the simmer.",
+          "img": ""
+        },
+        {
+          "id": 3,
+          "desc": "Add the beef, put a lid on top of the curry and cook over a low heat for 1 ½ – 2 hrs or until the meat is tender and falling apart. Remove the lid for the last 20 minutes of cooking.",
+          "img": ""
+        },
+        {
+          "id": 4,
+          "desc": "Stir through the garam masala and cream (if using) and season to taste. Scatter over the coriander and serve with naan breads or rice.",
+          "img": ""
+        }
+      ],
+      "image": [
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-curry-711a4c1.jpg?quality=90&webp=true&resize=300,272"
+      ],
+      "keywords": "beef,curry"
+    },
+    {
+      "id": "12a4caa1-5eb8-404e-9b3c-97fccf7f974d",
+      "author": "Dummy Author",
+      "name": "Dummy Recipe",
+      "catagory": "Curry",
+      "cuisine": "Indian",
+      "preptime": "20",
+      "cooktime": "120",
+      "yield": "4",
+      "keyWords": "",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingName": "oil",
+          "quantity": "2 bsp"
+        },
+        {
+          "id": 2,
+          "ingName": "diced braising steak",
+          "quantity": "500 g"
+        },
+        {
+          "id": 3,
+          "ingName": "butter",
+          "quantity": "1 tbsp"
+        },
+        {
+          "id": 4,
+          "ingName": "butter",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 5,
+          "ingName": "large onion , chopped",
+          "quantity": "1"
+        },
+        {
+          "id": 6,
+          "ingName": "garlic cloves , crushed",
+          "quantity": "2"
+        },
+        {
+          "id": 7,
+          "ingName": "thumb sized piece of ginger , finely grated",
+          "quantity": "1"
+        },
+        {
+          "id": 8,
+          "ingName": "hot chilli powder",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 9,
+          "ingName": " ground coriander",
+          "quantity": "1 tsp"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "desc": "There are many variations of passages of Lorem Ipsum available",
+          "img": ""
+        },
+        {
+          "id": 2,
+          "desc": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\"",
+          "img": ""
+        },
+        {
+          "id": 3,
+          "desc": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
+          "img": ""
+        },
+        {
+          "id": 4,
+          "desc": "\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+          "img": ""
+        }
+      ],
+      "image": [
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-curry-711a4c1.jpg?quality=90&webp=true&resize=300,272"
+      ],
+      "keywords": "beef,curry"
+    },
+    {
+      "id": "d847c182-54ae-478d-b5a3-589154b7123f",
+      "author": "Neil Rankin",
+      "name": "Lamb vindaloo",
+      "catagory": "Curry",
+      "cuisine": "Indian",
+      "preptime": "20",
+      "cooktime": "120",
+      "yield": "4",
+      "keyWords": "",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingName": "oil",
+          "quantity": "2 bsp"
+        },
+        {
+          "id": 2,
+          "ingName": "diced braising steak",
+          "quantity": "500 g"
+        },
+        {
+          "id": 3,
+          "ingName": "butter",
+          "quantity": "1 tbsp"
+        },
+        {
+          "id": 4,
+          "ingName": "butter",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 5,
+          "ingName": "large onion , chopped",
+          "quantity": "1"
+        },
+        {
+          "id": 6,
+          "ingName": "garlic cloves , crushed",
+          "quantity": "2"
+        },
+        {
+          "id": 7,
+          "ingName": "thumb sized piece of ginger , finely grated",
+          "quantity": "1"
+        },
+        {
+          "id": 8,
+          "ingName": "hot chilli powder",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 9,
+          "ingName": " ground coriander",
+          "quantity": "1 tsp"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "desc": "There are many variations of passages of Lorem Ipsum available",
+          "img": ""
+        },
+        {
+          "id": 2,
+          "desc": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\"",
+          "img": ""
+        },
+        {
+          "id": 3,
+          "desc": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
+          "img": ""
+        },
+        {
+          "id": 4,
+          "desc": "\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+          "img": ""
+        }
+      ],
+      "image": [
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/vindaloo-240c35c.jpg?quality=90&webp=true&resize=300,272",
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/home-style-lamb-curry-6a92ec4.jpg?quality=90&webp=true&resize=300,272"
+      ],
+      "keywords": "lamb,curry"
     }
   ],
   "users": []

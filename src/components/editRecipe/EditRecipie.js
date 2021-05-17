@@ -4,15 +4,10 @@ import { Form,Button,Container, Row, Col } from 'react-bootstrap';
 import { useParams, useHistory} from 'react-router'
 import {Link} from 'react-router-dom'
 import './editRecipe.css'
-//import { withRouter } from "react-router-dom";
-
-
 
 function EditRecipe(props) {
 
 const history = useHistory()
-
-
 
     let {id} = useParams()
     const [data, setData] = useState({
@@ -35,7 +30,6 @@ const history = useHistory()
       const [imgs, setImgs] = useState(["sdsdsd.com"])
       useEffect( ()=>{
         const getData = async () =>{
-          //axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')
           axios.get('https://json-recipes-server.herokuapp.com/recipes')
          .then( response =>{
             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
@@ -97,7 +91,6 @@ const history = useHistory()
              history.push(`/recipes/${id}`)
          } )
       };
-        //window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`
     
     return (
             <Container fluid > 
@@ -221,3 +214,6 @@ const history = useHistory()
 
 export default EditRecipe
 //export default withRouter(EditRecipe)
+//import { withRouter } from "react-router-dom";
+//window.location.replace(`https://vigilant-swirles-3f103b.netlify.app/recipes/${id}`
+//axios.get('https://sheltered-thicket-21153.herokuapp.com/https://public.bc.fi/s2100146/php/server_recipe/?path=recipes')

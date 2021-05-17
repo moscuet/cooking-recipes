@@ -42,7 +42,6 @@ const Main = (props) => {
       axios.get('https://json-recipes-server.herokuapp.com/recipes')
       //axios.get('http://localhost:3001/recipes')
      .then( response =>{
-       console.log('dta from heroku',response.data)
       setRecipes(response.data)
       setSearchedRecipes(response.data)
      })

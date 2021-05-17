@@ -67,8 +67,8 @@ export default function AddRecipe() {
 
       const submitData = (e) => {
           e.preventDefault()
-        //axios.post("https://json-recipes-server.herokuapp.com/recipes", data)
-        axios.post("http://localhost:3001/recipes", data)
+        axios.post("https://json-recipes-server.herokuapp.com/recipes", data)
+        //axios.post("http://localhost:3001/recipes", data)
         .then( response=> {
             window.location.replace(`/recipes/${response.data.id}`)
            // e.target.reset()

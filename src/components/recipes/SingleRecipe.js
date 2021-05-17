@@ -13,7 +13,9 @@ export default function SingleRecipe() {
    const  {id} = useParams()
    useEffect(() => {
         if(!recipe){
-            axios.get(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
+            
+            axios.get(`http://localhost:3001/recipes/${id}`)
+            //axios.get(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
             .then( response => setrecipe(response.data))
         }
     }) 

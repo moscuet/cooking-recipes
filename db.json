@@ -40,6 +40,85 @@
         "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fish_pie-850c098.jpg?quality=90&webp=true&resize=300,272"
       ],
       "keywords": "fish pie,maxican,dinner"
+    },
+    {
+      "id": "928ec028-0a1a-4220-af5b-133d866eb827",
+      "author": "Katy Greenwood",
+      "name": "Mexican chicken burger",
+      "catagory": "Burger",
+      "cuisine": "",
+      "preptime": "10",
+      "cooktime": "10",
+      "yield": "1",
+      "keyWords": "",
+      "description": "Ready in under 20 minutes, this burger with spiced chipotle chicken breast, in toasted brioche with guacamole, makes for a satisfying weeknight treat for one",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingName": " chicken breast",
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "ingName": "chipotle paste",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 3,
+          "ingName": "lime, juiced",
+          "quantity": "1"
+        },
+        {
+          "id": 4,
+          "ingName": " slices cheese",
+          "quantity": "1-2"
+        },
+        {
+          "id": 5,
+          "ingName": "brioche bun, split",
+          "quantity": "1"
+        },
+        {
+          "id": 6,
+          "ingName": "avocado",
+          "quantity": "½ "
+        },
+        {
+          "id": 7,
+          "ingName": "cherry tomatoes, chopped",
+          "quantity": "2"
+        },
+        {
+          "id": 8,
+          "ingName": "pickled jalapeño slices, chopped",
+          "quantity": "3-4"
+        },
+        {
+          "id": 9,
+          "ingName": "small garlic clove, finely grated",
+          "quantity": "½"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "desc": "Put the chicken breast between two pieces of cling film and bash with a rolling pin or pan to about 1cm thick. Mix the chipotle paste with half the lime juice and spread over the chicken.",
+          "img": ""
+        },
+        {
+          "id": 2,
+          "desc": "Heat a griddle pan over a high heat. Once hot, cook the chicken for 3 mins each side until cooked through, adding the cheese for the final 2 mins of cooking. Add the bun, cut-side down, to the griddle pan to toast lightly. Season the chicken.",
+          "img": ""
+        },
+        {
+          "id": 3,
+          "desc": "Meanwhile, mash the avocado with the remaining lime juice. Stir in the cherry tomatoes, jalapeño and garlic, and season with a little salt. Spread over the base of the bun, then add the chicken followed by the top of the bun.",
+          "img": ""
+        }
+      ],
+      "image": [
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-chicken-burger-092a6e0.jpg?quality=90&webp=true&resize=300,272"
+      ]
     }
   ],
   "users": []

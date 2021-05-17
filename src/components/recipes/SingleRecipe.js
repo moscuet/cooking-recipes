@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
-import {useParams} from 'react-router'
+import {useParams, useHistory} from 'react-router'
 import {Link} from 'react-router-dom'
 import {Button, Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,9 +8,9 @@ import { faClock , faUtensils} from '@fortawesome/free-solid-svg-icons'
 import'./singleRecipe.css'
 export default function SingleRecipe() {
 
-
     const [recipe, setrecipe] = useState();
    const  {id} = useParams()
+   const history = useHistory()
    useEffect(() => {
         if(!recipe){
             
@@ -22,7 +22,7 @@ export default function SingleRecipe() {
     const deleteRecipe = () =>{
         if(window.confirm('Are you sure you want to delete?')){
             axios.delete(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
-            .then ( response => window.location.replace('/recipes') )
+            .then ( response => history.push('/recipes') )
         }
     }
        
@@ -82,3 +82,7 @@ export default function SingleRecipe() {
             {data}
          </div>
 }
+
+
+
+//.then ( response => window.location.replace('/recipes') )

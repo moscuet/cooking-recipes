@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { Form,Button,Container, Row, Col } from 'react-bootstrap';
+import {useHistory} from 'react-router'
 import './addRecipe.css'
 import SubHeader from '../header/SubHeader'
 export default function AddRecipe() {
@@ -24,7 +25,8 @@ export default function AddRecipe() {
       const [steps, setSteps] = useState([{ id: 1, desc: "", img: "" },])
       const [imgs, setImgs] = useState([""])
 
-   
+    const history = useHistory()
+
       const formChangeHandler = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
       };
@@ -70,8 +72,7 @@ export default function AddRecipe() {
         axios.post("https://json-recipes-server.herokuapp.com/recipes", data)
         //axios.post("http://localhost:3001/recipes", data)
         .then( response=> {
-            window.location.replace(`/recipes/${response.data.id}`)
-           // e.target.reset()
+            history.push(`/recipes/${data.id}`)
         } )
       };
         

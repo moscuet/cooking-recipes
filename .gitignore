@@ -4,3 +4,5 @@ utils
 src/components/appContextApi
 json_server_recipes
 recipes_server
+# Local Netlify folder
+.netlify

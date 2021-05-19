@@ -12,9 +12,7 @@ export default function SingleRecipe() {
    const  {id} = useParams()
    const history = useHistory()
    useEffect(() => {
-        if(!recipe){
-            
-            //axios.get(`http://localhost:3001/recipes/${id}`)
+        if(!recipe){          
             axios.get(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
             .then( response => setrecipe(response.data))
         }
@@ -86,3 +84,4 @@ export default function SingleRecipe() {
 
 
 //.then ( response => window.location.replace('/recipes') )
+//axios.get(`http://localhost:3001/recipes/${id}`)

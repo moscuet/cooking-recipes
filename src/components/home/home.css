@@ -1,13 +1,19 @@
 .home {
-    height:1280px;
     width:100%;
-    background-image: linear-gradient(to bottom right, #fafafa, #e9f2e7);
-
+    /* background-image: linear-gradient(to bottom right, #fafafa, #e9f2e7); */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 .home .headerText p {
     color:green;
 }
 .pick {
     display: flex;
+    flex-wrap: wrap;
+}
+.home button {
+    width:120px;
+    margin-top: 20px;
 }
 /* #f6c6a1  #f3f5f5 e9f2e7 */

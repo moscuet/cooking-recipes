@@ -3,24 +3,23 @@
     display: flex;
     justify-content: center;
     height: 400px;
-    width: 300px;
-    margin: 20px;
-    padding-top: 20px;
+    width: 280px;
+    margin: 10px;
+    padding-top: 10px;
     text-align: center;
     /* background: #8cc32a; */
     border-radius: 5px;
     background: #FFE000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #799F0C, #FFE000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #799F0C, #e4d32c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 .image-div {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 275px;
     margin-bottom: 20px;
    
 }

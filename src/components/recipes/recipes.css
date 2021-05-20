@@ -1,9 +1,11 @@
-.recipes_container {
+.recipe_container {
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .recipies  {
+  max-width: 1240px;
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;

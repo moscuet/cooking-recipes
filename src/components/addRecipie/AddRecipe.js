@@ -11,7 +11,7 @@ export default function AddRecipe() {
         author:"",
         name: "",
         catagory:"",
-        cuisine:"",
+        causine:"",
         preptime:"",
         cooktime:"",
         yield:"",
@@ -101,8 +101,8 @@ export default function AddRecipe() {
                                 <Form.Control type="text" id= "catagory" name= "catagory" onChange ={formChangeHandler}  />
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label htmlFor = "cuisine">Cuisine</Form.Label>
-                                <Form.Control type="text" id= "cuisine" name= "cuisine" onChange ={formChangeHandler}  />
+                                <Form.Label htmlFor = "causine">causine</Form.Label>
+                                <Form.Control type="text" id= "causine" name= "causine" onChange ={formChangeHandler}  />
                             </Form.Group>
 
                             <Form.Group>

@@ -15,7 +15,7 @@ const history = useHistory()
         author:"",
         name: "",
         catagory:"",
-        cuisine:"",
+        causine:"",
         preptime:"",
         cooktime:"",
         yield:"",

@@ -14,6 +14,7 @@ import ContactPage from '../contactPage/Contact'
 const Main = (props) => {
  
   const [recipes, setRecipes] = useState([])
+  const [random, setRandom] = useState([])
   const [searchedRecipes, setSearchedRecipes] = useState([])
   const [newRecipe, setNewRecipe] = useState({
     recipes:[],
@@ -35,6 +36,19 @@ const Main = (props) => {
       steps:[]
     }
   })
+
+  const getRandomRecipe = (recs) =>{
+      const randomIndexs = []
+    const randomRecipes = []
+    for( let i=0; 3>randomIndexs.length ; i++){
+      let randomIndex = Math.floor(Math.random()*recs.length)
+      if(!randomIndexs.includes(randomIndex)) {
+        randomIndexs.push(randomIndex)
+        randomRecipes.push(recs[randomIndex])
+      }
+    }
+    return randomRecipes
+  }
  
   useEffect( ()=>{
     const getData = async () =>{
@@ -44,6 +58,7 @@ const Main = (props) => {
      .then( response =>{
       setRecipes(response.data)
       setSearchedRecipes(response.data)
+      setRandom(getRandomRecipe(response.data))
      })
     }
     getData()
@@ -70,12 +85,13 @@ const Main = (props) => {
         console.log(res.data)
       })
   }  
+  
 
 
   return (
     <div className = 'main_div'>
       <Switch>
-        <Route path="/" exact component={Home}></Route>
+        <Route path="/" exact > <Home recipes = {random}/> </Route>
         <Route path='/recipes/:id'> <SingleRecipe /></Route>
         <Route path="/recipes" render={() => (<Recipes recipes ={searchedRecipes} inputHandler = {searchInputHandler}/>)} ></Route>
         <Route path="/about" component={About}></Route>

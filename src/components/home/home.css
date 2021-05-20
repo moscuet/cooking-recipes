@@ -4,5 +4,10 @@
     background-image: linear-gradient(to bottom right, #fafafa, #e9f2e7);
 
 }
-
+.home .headerText p {
+    color:green;
+}
+.pick {
+    display: flex;
+}
 /* #f6c6a1  #f3f5f5 e9f2e7 */

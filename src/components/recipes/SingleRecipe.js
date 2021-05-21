@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import {Button, Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock , faUtensils} from '@fortawesome/free-solid-svg-icons'
+import ImageSlider from '../imageSlider/ImageSlider'
 import'./singleRecipe.css'
 export default function SingleRecipe() {
 
@@ -26,7 +27,7 @@ export default function SingleRecipe() {
        
    const ingredientsList = () => recipe.ingredients.map( ing =><li key = {ing.id}>- {ing.quantity} {ing.ingName}</li>)
     const stepsList = () =>  recipe.steps.map( (step,i) => <div key = {step.id}><h5>Step {i+1}</h5>{step.desc}</div>)
-     const imgList = () =>recipe.image.map( (im,i)=> <div key = {i} className = "img_div"> <img src={im} alt ={`recipe pic number ${i}`}/> </div>)
+     //const imgList = () =>recipe.image.map( (im,i)=> <div key = {i} className = "img_div"> <img src={im} alt ={`recipe pic number ${i}`}/> </div>)
     let data = undefined
     if(!recipe){
         data= <p> Loading data..</p>
@@ -35,10 +36,11 @@ export default function SingleRecipe() {
             data =  <div className = "single-recipe-wrapper">
                         <Container fluid>
                             <Row  >
-                                <Col xs ={12} md ={7} lg ={7}>
-                                    <div  className= 'imgs'> {imgList()}</div>
+                                <Col xs ={12} md ={6} lg ={6}>
+                                    <ImageSlider imgs = {recipe.image} />
+                                    {/* <div  className= 'imgs'> {imgList()}</div> */}
                                 </Col>
-                                <Col xs={12} md ={4} lg ={4}>
+                                <Col xs={12} md ={6} lg ={6}>
                                     <h1>{recipe.name}</h1>
                                     <p style ={{color:'green'}}>{recipe.author? 'By '+recipe.author:''}</p>
                                     <Row>
@@ -76,7 +78,6 @@ export default function SingleRecipe() {
                     </div>
         }
    return <div>
-            {/* {toHome? <Redirect to ="/"/> : null} */}
             {data}
          </div>
 }

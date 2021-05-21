@@ -1,0 +1,25 @@
+.slideImage{
+    width: 90%;
+    height:100%;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.slideImage img{
+  width: 100%;
+  height:406px;
+}
+
+.slideImage div {
+    text-align: center;
+}
+.slideImage button {
+    background: white;
+    color: green;
+    border: 1px solid rgba(255, 255, 255, .1);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; 
+}

@@ -6,7 +6,6 @@ export default function Recipe({recipe}) {
     //let {url} = useRouteMatch()
     return (
         <div className="recipe-box">
-            {/* <Link to = {`${url}/${recipe.id}`}> */}
             <Link to = {`/recipes/${recipe.id}`}>
                 <div className="image-div">
                     <img src={recipe.image[0]} alt='recipie pic'/>       

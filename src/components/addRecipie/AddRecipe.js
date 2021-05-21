@@ -90,41 +90,41 @@ export default function AddRecipe() {
                         <Col className='input_col1 bg-light text-dark' xs={12} md={5} lg={4}>
                             <Form.Group>
                                 <Form.Label htmlFor = "author">author</Form.Label>
-                                <Form.Control type="ctext" id= "author" name= "author" onChange ={formChangeHandler}  />
+                                <Form.Control type="ctext" id= "author" name= "author" placeholder = "Name of author" onChange ={formChangeHandler}  required />
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label htmlFor = "name">Recipe name</Form.Label>
-                                <Form.Control id = 'name' type="text" name= "name"onChange ={formChangeHandler}  required/>
+                                <Form.Label htmlFor = "name">Recipe name *</Form.Label>
+                                <Form.Control id = 'name' type="text" name= "name" placeholder = "Name of recipe" onChange ={formChangeHandler}  required/>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label htmlFor = "catagory">Catagory</Form.Label>
-                                <Form.Control type="text" id= "catagory" name= "catagory" onChange ={formChangeHandler}  />
+                                <Form.Control type="text" id= "catagory" name= "catagory" placeholder = "i.e. dinner,lunch,deserts"  onChange ={formChangeHandler}  />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label htmlFor = "causine">causine</Form.Label>
-                                <Form.Control type="text" id= "causine" name= "causine" onChange ={formChangeHandler}  />
+                                <Form.Control type="text" id= "causine" name= "causine" placeholder = "Indian, asian"  onChange ={formChangeHandler}  />
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Label htmlFor = "preptime">Preparation time</Form.Label>
-                                <Form.Control type="number" id= "preptime" name= "preptime" onChange ={formChangeHandler} />
+                                <Form.Control type="number" id= "preptime" name= "preptime" placeholder = "Preparation time in minutes"  onChange ={formChangeHandler} />
                             </Form.Group>
 
                             <Form.Group>
-                                <Form.Label htmlFor = "cooktime">Cook time</Form.Label>
-                                <Form.Control type="number" id= "cooktime" name= "cooktime" onChange ={formChangeHandler}  />
+                                <Form.Label htmlFor = "cooktime">Cook time *</Form.Label>
+                                <Form.Control type="number" id= "cooktime" name= "cooktime" placeholder = "cooking time in minutes" required onChange ={formChangeHandler}  />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label htmlFor = "yield">Yield</Form.Label>
-                                <Form.Control type="text" id= "yield" name= "yield" onChange ={formChangeHandler} />
+                                <Form.Control type="text" id= "yield" name= "yield" placeholder = "persons served"  onChange ={formChangeHandler} />
                             </Form.Group>                        
                             <Form.Group>
-                                <Form.Label htmlFor = "description">Description</Form.Label>
-                                <Form.Control type="text" name= "description" rows = {3} as ="textarea" onChange ={formChangeHandler} />
+                                <Form.Label htmlFor = "description">Description *</Form.Label>
+                                <Form.Control type="text" name= "description" rows = {3} as ="textarea" required  placeholder = "short description"  onChange ={formChangeHandler} />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label htmlFor = "keywords">Key words</Form.Label>
-                                <Form.Control type="textarea" id= "keywords" name= "keywords"  onChange ={formChangeHandler} />
+                                <Form.Control type="textarea" id= "keywords" name= "keywords" placeholder = "i.e. curry,chicken,asian"  onChange ={formChangeHandler} />
                                 <p>Separate multiple keywords with commas.</p>
                             </Form.Group>
                         </Col>

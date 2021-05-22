@@ -1,12 +1,8 @@
 import React from 'react'
 import contactStyle from './style.module.scss'
-//import Layout from '../../components/layout/index'
 import Form from './Form'
 import ContactCard from './ContactCard'
 import SubHeader from '../header/SubHeader'
-//import HeroTitleMid from '../../components/titles/HeroTitleMid'
-//import Header from '../../components/mainheader/Header'
-//const subtitle ='Qui cupidatat ipsum dolore velit et irure cillum in dolore. Cillum in dolore qui cupidatat ipsum dolore velit et irure cillum in dolore '
 const ContactPage = () => (
     <>
       <SubHeader 

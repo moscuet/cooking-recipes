@@ -28,12 +28,7 @@ h5:first-child{
    padding-left: 20px;
    padding-top: 20px;
   }
-  .input_col1{
-      
-  }
-
-
-
-  .outline-success{
-      width: 200px;
+  .form-group .row .col:last-child {
+    display: flex;
+    flex-direction: column-reverse;
   }

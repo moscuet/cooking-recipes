@@ -75,8 +75,23 @@ export default function AddRecipe() {
             history.push(`/recipes/${data.id}`)
         } )
       };
-        
+      const deleteIng =(i) => {
+        const list = [...ingredients];
+        list.splice(i, 1);
+        setIngredients(list);
+      }      
+      const deleteStep =(i) => {
+        const stps = [...steps];
+        stps.splice(i, 1);
+        setSteps(stps);
+      }
+      const deleteImg =(i) => {
+        let images   = [...imgs];
+        images.splice(i, 1);
+        setImgs(images);
+      }
 
+        
 
     return (
             <>
@@ -139,13 +154,23 @@ export default function AddRecipe() {
                                             <Form.Label htmlFor="img">{`Recipie image-${i+1} : url `}</Form.Label>
                                             <Form.Control type="text" name="img" onChange={(e) => changeImgsData(e, i)} />
                                         </Col>
+                                        <Col>
+                                           {( imgs.length>1)&&(
+                                               <Button 
+                                                variant="danger"
+                                                onClick={() => deleteImg(i)}
+                                                >
+                                                Delete
+                                               </Button>
+                                           )}
+                                        </Col> 
                                     </Row>
                                     </Form.Group>
                                 </div>
                                 );
                             })}
-                            <Button variant="outline-success" onClick={addImage}>Add more image</Button>
 
+                            <Button variant="outline-success" onClick={addImage}>Add more image</Button>
                         
                             <h5>Add ingredients</h5>
                             {ingredients.map((_, i) => {
@@ -161,7 +186,16 @@ export default function AddRecipe() {
                                             <Form.Label htmlFor="">Quantity</Form.Label>
                                             <Form.Control type="text"  name="quantity" onChange={(e) => changeIngData(e, i)}/>
                                         </Col>
-                                        
+                                        <Col>
+                                           {( ingredients.length>1)&&(
+                                               <Button 
+                                                variant="danger"
+                                                onClick={() => deleteIng(i)}
+                                                >
+                                                Delete
+                                               </Button>
+                                           )}
+                                        </Col>                                       
                                     </Row>
                                     </Form.Group>
                                 </div>
@@ -183,6 +217,16 @@ export default function AddRecipe() {
                                                 <Form.Label htmlFor="img">Image</Form.Label>
                                                 <Form.Control type="text" name="img" onChange={(e) => changeStepsData(e, i)} />
                                             </Col>
+                                            <Col>
+                                           {( steps.length>1)&&(
+                                               <Button 
+                                                variant="danger"
+                                                onClick={() => deleteStep(i)}
+                                                >
+                                                Delete
+                                               </Button>
+                                           )}
+                                        </Col> 
                                         </Row>
                                     </Form.Group>
                                 </div>

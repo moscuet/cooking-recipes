@@ -1,6 +1,7 @@
 # REACt-App: My-Recipies
 This is a recipies app developed with React.js and php
 
+## [Live-App](https://vigilant-swirles-3f103b.netlify.app/)
 ### Notes
 1. php server was build to serve cooking recipes as json file to frontend app. 
 2. server is being hosted in Business College Helsinkis's hosting platform BC drive.

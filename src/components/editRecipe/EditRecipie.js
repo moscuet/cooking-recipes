@@ -30,7 +30,7 @@ const history = useHistory()
       const [imgs, setImgs] = useState(["sdsdsd.com"])
       useEffect( ()=>{
         const getData = async () =>{
-          axios.get('https://json-recipes-server.herokuapp.com/recipes')
+          axios.get('https://recipes-json-server.herokuapp.com/recipes')
          .then( response =>{
             let targetRecipe = response.data.filter( recipe=> recipe.id===id)[0]
             setData(targetRecipe)
@@ -97,10 +97,11 @@ const history = useHistory()
         e.preventDefault();
         setImgs([...imgs, '']);
       };
+ 
 
       const submitData = (e) => {
           e.preventDefault()
-         axios.put(`https://json-recipes-server.herokuapp.com/recipes/${id}`, data)
+         axios.put(`https://recipes-json-server.herokuapp.com/recipes/${id}`, data)
          //.then( <Redirect to = '/'/>) 
          //.then(props.history.push(`/recipes/${id}`))
          .then( response=> {

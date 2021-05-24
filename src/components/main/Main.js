@@ -53,10 +53,9 @@ const Main = (props) => {
   useEffect( ()=>{
     const getData = async () =>{
       //axios.get('http://localhost:3001/recipes')
-      axios.get('https://json-recipes-server.herokuapp.com/recipes')
-
+      axios.get('https://recipes-json-server.herokuapp.com/recipes')
      .then( response =>{
-       console.log(response.data)
+      console.log(response.data)
       setRecipes(response.data)
       setSearchedRecipes(response.data)
       setRandom(getRandomRecipe(response.data))
@@ -81,9 +80,8 @@ const Main = (props) => {
 
   const formSubmitHandler =(e) =>{
     e.preventDefault()
-    axios.get('http://localhost:3001/recipes')
+    axios.get('https://recipes-json-server.herokuapp.com/recipes')
       .then( res =>{
-        console.log(res.data)
       })
   }  
   

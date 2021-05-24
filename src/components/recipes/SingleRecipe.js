@@ -14,13 +14,13 @@ export default function SingleRecipe() {
    const history = useHistory()
    useEffect(() => {
         if(!recipe){          
-            axios.get(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
+            axios.get(`https://recipes-json-server.herokuapp.com/recipes/${id}`)
             .then( response => setrecipe(response.data))
         }
     }) 
     const deleteRecipe = () =>{
         if(window.confirm('Are you sure you want to delete?')){
-            axios.delete(`https://json-recipes-server.herokuapp.com/recipes/${id}`)
+            axios.delete(`https://recipes-json-server.herokuapp.com/recipes/${id}`)
             .then ( response => history.push('/recipes') )
         }
     }

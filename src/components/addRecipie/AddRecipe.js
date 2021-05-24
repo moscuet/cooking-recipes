@@ -69,7 +69,7 @@ export default function AddRecipe() {
 
       const submitData = (e) => {
           e.preventDefault()
-        axios.post("https://json-recipes-server.herokuapp.com/recipes", data)
+        axios.post("https://recipes-json-server.herokuapp.com/recipes", data)
         //axios.post("http://localhost:3001/recipes", data)
         .then( response=> {
             history.push(`/recipes/${data.id}`)

@@ -211,7 +211,9 @@ export default function AddRecipe() {
                                         <Row>
                                             <Col>
                                                 <Form.Label htmlFor="desc">{`Step ${i+1} : Description`}  </Form.Label>
-                                                <Form.Control type="text"  name="desc" rows = {3} as ="textarea"  onChange={(e) => changeStepsData(e, i)}/>
+                                                {/* <Form.Control type="text"  name="desc" rows = {3} as ="textarea"  onChange={(e) => changeStepsData(e, i)}/> */}
+                                                <Form.Control type="text"  name="desc" onChange={(e) => changeStepsData(e, i)}/>
+
                                             </Col>
                                             <Col>
                                                 <Form.Label htmlFor="img">Image</Form.Label>
@@ -226,7 +228,7 @@ export default function AddRecipe() {
                                                 Delete
                                                </Button>
                                            )}
-                                        </Col> 
+                                           </Col> 
                                         </Row>
                                     </Form.Group>
                                 </div>

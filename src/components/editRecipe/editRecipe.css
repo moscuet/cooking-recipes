@@ -34,4 +34,10 @@ h5:first-child{
       width:140px
 
   }
+
   
+
+    .form-group .row .col:last-child {
+        display: flex;
+        flex-direction: column-reverse;
+    }

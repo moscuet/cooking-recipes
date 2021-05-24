@@ -61,17 +61,33 @@ const history = useHistory()
         setSteps(list);
         setData({ ...data, steps: steps });
       };
+      const deleteStep =(i) => {
+        const stps = [...steps];
+        stps.splice(i, 1);
+        setSteps(stps);
+      }
+     
       const changeImgsData = (e,i) => {
        imgs[i]=e.target.value
        setData({ ...data, image: imgs });
       };
-
+      const deleteImg =(i) => {
+        let images   = [...imgs];
+        images.splice(i, 1);
+        setImgs(images);
+      }
 
       const addIngredient = (e, i) => {
         e.preventDefault();
         const newIng = { id: ingredients.length + 1, ingName: "", quantity: "" };
         setIngredients([...ingredients, newIng]);
-      };      
+      };    
+      const deleteIng =(i) => {
+        const list = [...ingredients];
+        list.splice(i, 1);
+        setIngredients(list);
+      } 
+
       const addStep = (e, i) => {
         e.preventDefault();
         const newStep = { id: steps.length + 1, desc: "", img:"" };
@@ -150,6 +166,16 @@ const history = useHistory()
                                             <Form.Label htmlFor="img">{`Recipie image-${i+1} : url `}</Form.Label>
                                             <Form.Control type="text" name="img" value = {imgs[i]} onChange={(e) => changeImgsData(e, i)} />
                                         </Col>
+                                        <Col>
+                                           {( imgs.length>1)&&(
+                                               <Button 
+                                                variant="danger"
+                                                onClick={() => deleteImg(i)}
+                                                >
+                                                Delete
+                                               </Button>
+                                           )}
+                                        </Col> 
                                     </Row>
                                     </Form.Group>
                                 </div>
@@ -171,6 +197,16 @@ const history = useHistory()
                                         <Col>
                                             <Form.Label htmlFor="">Quantity</Form.Label>
                                             <Form.Control type="text"  name="quantity" value = {ingredients[i].quantity} onChange={(e) => changeIngData(e, i)}/>
+                                        </Col>
+                                        <Col>
+                                            {( ingredients.length>1)&&(
+                                                <Button 
+                                                    variant="danger"
+                                                    onClick={() => deleteIng(i)}
+                                                    >
+                                                    Delete
+                                                </Button>
+                                            )}
                                         </Col>
                                         
                                     </Row>
@@ -194,6 +230,16 @@ const history = useHistory()
                                                 <Form.Label htmlFor="img">Image</Form.Label>
                                                 <Form.Control type="text" name="img" value = {steps[i].img} onChange={(e) => changeStepsData(e, i)} />
                                             </Col>
+                                            <Col>
+                                              {( steps.length>1)&&(
+                                               <Button 
+                                                variant="danger"
+                                                onClick={() => deleteStep(i)}
+                                                >
+                                                Delete
+                                               </Button>
+                                              )}
+                                           </Col> 
                                         </Row>
                                     </Form.Group>
                                 </div>
